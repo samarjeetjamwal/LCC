@@ -3,534 +3,681 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Statement of Alignment — Samarjeet Jamwal</title>
+<title>Samarjeet Jamwal — Job Alignment Portfolio | Cway Group, Nigeria</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F6F3EA;
-    --paper-line:#E4DFD1;
-    --ink:#16253D;
-    --ink-soft:#4C5A70;
-    --brass:#A9824E;
-    --brass-light:#D8C6A3;
-    --green:#3F6B4E;
-    --green-bg:#E4EDE3;
-    --amber:#9C7A2E;
-    --amber-bg:#F1E7D1;
-    --rust:#A34F32;
-    --rust-bg:#F1DED3;
+    --ink:#0E2238;
+    --ink-2:#16324F;
+    --paper:#EFEDE4;
+    --paper-2:#F7F5EF;
+    --brass:#A9823C;
+    --brass-light:#C9A868;
+    --ledger-green:#2F5D45;
+    --overdue:#8C3B2E;
+    --text:#1B2430;
+    --text-soft:#4C5566;
+    --rule:#D3CDBC;
+    --rule-dark:#3A5170;
+    --serif:'Source Serif 4', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
   }
-  *{box-sizing:border-box;}
+  *{box-sizing:border-box; margin:0; padding:0;}
   body{
-    margin:0;
     background:var(--paper);
-    background-image:
-      repeating-linear-gradient(var(--paper) 0 34px, var(--paper-line) 34px 35px);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
-  .sheet{
-    max-width:920px;
-    margin:0 auto;
-    padding:56px 48px 80px;
+  .sheet{max-width:1040px; margin:0 auto; background:var(--paper-2);}
+
+  /* ============ HEADER ============ */
+  header.hero{
+    background:
+      radial-gradient(1100px 480px at 85% -120px, rgba(169,130,60,0.18), transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+    color:#EDE9DD;
+    padding:56px 56px 42px;
+    position:relative;
+    border-bottom:3px solid var(--brass);
   }
-  /* ===== Letterhead ===== */
-  .letterhead{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    border-bottom:2px solid var(--ink);
-    padding-bottom:18px;
-    margin-bottom:6px;
-  }
-  .letterhead h1{
-    font-family:'Fraunces',serif;
-    font-optical-sizing:auto;
-    font-weight:600;
-    font-size:38px;
-    margin:0 0 4px;
-    letter-spacing:-0.01em;
-  }
-  .letterhead .role{
-    font-family:'IBM Plex Mono',monospace;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    font-size:12px;
-    color:var(--brass);
-    font-weight:600;
-  }
-  .doc-meta{
-    text-align:right;
-    font-family:'IBM Plex Mono',monospace;
+  .eyebrow{
+    font-family:var(--mono);
     font-size:11.5px;
-    color:var(--ink-soft);
-    line-height:1.7;
-  }
-  .doc-meta .doc-title{
-    font-size:12px;
+    letter-spacing:.16em;
     text-transform:uppercase;
-    letter-spacing:0.1em;
-    color:var(--ink);
-    font-weight:600;
-    margin-bottom:4px;
-  }
-  .contact-strip{
+    color:var(--brass-light);
     display:flex;
-    gap:22px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    color:var(--ink-soft);
-    margin:10px 0 40px;
-  }
-
-  /* ===== Summary ===== */
-  .summary{
-    font-family:'Fraunces',serif;
-    font-size:17px;
-    line-height:1.65;
-    color:var(--ink);
-    font-weight:400;
-    max-width:760px;
-    margin-bottom:44px;
-  }
-  .summary em{
-    font-style:normal;
-    color:var(--brass);
-    border-bottom:1.5px solid var(--brass-light);
-  }
-
-  /* ===== Section headers ===== */
-  .section-head{
-    display:flex;
-    align-items:baseline;
-    gap:12px;
-    margin:52px 0 18px;
-  }
-  .section-num{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    color:var(--brass);
-    font-weight:600;
-  }
-  .section-head h2{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:21px;
-    margin:0;
-    letter-spacing:-0.01em;
-  }
-  .section-head::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--paper-line);
-    align-self:center;
-  }
-
-  /* ===== Ledger table ===== */
-  .ledger{
-    width:100%;
-    border-collapse:collapse;
-    font-size:13.5px;
-  }
-  .ledger thead th{
-    text-align:left;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;
-    text-transform:uppercase;
-    letter-spacing:0.07em;
-    color:var(--ink-soft);
-    font-weight:600;
-    padding:0 10px 10px;
-    border-bottom:1.5px solid var(--ink);
-  }
-  .ledger tbody tr{
-    border-bottom:1px solid var(--paper-line);
-  }
-  .ledger tbody tr:hover{ background:rgba(169,130,78,0.06); }
-  .ledger td{
-    padding:14px 10px;
-    vertical-align:top;
-    line-height:1.5;
-  }
-  .ledger td.cat{
-    width:20%;
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:14.5px;
-    color:var(--ink);
-  }
-  .ledger td.evi{
-    width:52%;
-    color:var(--ink-soft);
-  }
-  .ledger td.stat{
-    width:28%;
-  }
-  .badge{
-    display:inline-flex;
     align-items:center;
-    gap:6px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::after{content:""; height:1px; flex:1; background:rgba(201,168,104,0.35);}
+  .hero-title{
+    font-family:var(--serif);
     font-weight:600;
-    padding:4px 9px;
-    border-radius:3px;
+    font-size:clamp(32px,4.4vw,50px);
+    letter-spacing:-0.01em;
+    color:#fff;
+  }
+  .hero-role{
+    font-family:var(--mono);
+    font-size:13.5px;
+    letter-spacing:.06em;
+    color:var(--brass-light);
+    margin-top:10px;
     text-transform:uppercase;
-    letter-spacing:0.03em;
-    white-space:nowrap;
   }
-  .badge::before{ content:""; width:6px; height:6px; border-radius:50%; }
-  .badge.strong{ background:var(--green-bg); color:var(--green); }
-  .badge.strong::before{ background:var(--green); }
-  .badge.match{ background:var(--amber-bg); color:var(--amber); }
-  .badge.match::before{ background:var(--amber); }
-  .badge.watch{ background:var(--rust-bg); color:var(--rust); }
-  .badge.watch::before{ background:var(--rust); }
-  .stat-note{
-    display:block;
-    margin-top:6px;
-    font-size:12px;
-    color:var(--ink-soft);
-    font-family:'Inter',sans-serif;
+  .hero-sub{
+    max-width:640px;
+    margin-top:18px;
+    font-size:15.5px;
+    color:#C7CEDA;
   }
+  .hero-meta{
+    margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:#B9C2D1;
+  }
+  .hero-meta span{display:flex; align-items:center; gap:7px;}
+  .hero-meta b{color:#EDE9DD; font-weight:500;}
+  .target{
+    margin-top:26px;
+    padding:14px 18px;
+    border:1px solid rgba(201,168,104,0.4);
+    border-left:3px solid var(--brass);
+    background:rgba(255,255,255,0.03);
+    font-size:13.5px;
+    color:#D8DCE3;
+    max-width:640px;
+  }
+  .target b{color:#fff;}
 
-  /* ===== KPI ledger ===== */
-  .kpi-grid{
+  /* ============ LEDGER STRIP (signature element) ============ */
+  .ledger{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--ink);
-    border:1px solid var(--ink);
+    grid-template-columns:repeat(4,1fr);
+    background:var(--ink-2);
+    border-bottom:1px solid rgba(201,168,104,0.25);
   }
-  .kpi-card{
-    background:var(--paper);
+  .ledger-col{
     padding:22px 20px;
+    border-right:1px solid rgba(237,233,221,0.1);
   }
-  .kpi-figure{
-    font-family:'Fraunces',serif;
-    font-weight:700;
-    font-size:32px;
-    color:var(--brass);
-    line-height:1;
+  .ledger-col:last-child{border-right:none;}
+  .ledger-bucket{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--brass-light);
     margin-bottom:8px;
   }
-  .kpi-label{
-    font-size:12.5px;
-    color:var(--ink);
-    font-weight:600;
-    line-height:1.4;
-    margin-bottom:4px;
-  }
-  .kpi-sub{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;
-    color:var(--ink-soft);
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-  }
-
-  /* ===== Signature: Alignment Aging Schedule ===== */
-  .aging-wrap{
-    border:1px solid var(--paper-line);
-    background:rgba(255,255,255,0.4);
-    padding:28px 26px 22px;
-  }
-  .aging-title{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    color:var(--ink-soft);
-    margin-bottom:16px;
-  }
-  .aging-bar{
-    display:flex;
-    width:100%;
-    height:46px;
-    border-radius:3px;
-    overflow:hidden;
-    border:1px solid var(--ink);
-  }
-  .aging-seg{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
+  .ledger-figure{
+    font-family:var(--serif);
+    font-size:28px;
     font-weight:600;
     color:#fff;
+  }
+  .ledger-label{
+    font-size:12px;
+    color:#AEB7C6;
+    margin-top:4px;
+    line-height:1.4;
+  }
+
+  /* ============ SECTIONS ============ */
+  main{padding:50px 56px 20px;}
+  section{margin-bottom:52px;}
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:22px;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:12px;
+  }
+  .sec-tab{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.1em;
+    color:#fff;
+    background:var(--ink);
+    padding:4px 10px;
+    border-radius:2px;
+    flex-shrink:0;
+  }
+  .sec-title{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:23px;
+    color:var(--ink);
+  }
+  .sec-note{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-soft);
+    margin-left:auto;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+  }
+
+  .lede{
+    font-size:15.5px;
+    color:var(--text-soft);
+    max-width:760px;
+    margin-bottom:8px;
+  }
+  .lede b{color:var(--text);}
+
+  /* Alignment table */
+  table.align{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13.8px;
+  }
+  table.align th{
+    text-align:left;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#fff;
+    background:var(--ink);
+    padding:10px 14px;
+  }
+  table.align th:first-child{width:32%;}
+  table.align td{
+    padding:13px 14px;
+    border-bottom:1px solid var(--rule);
+    vertical-align:top;
+    color:var(--text);
+  }
+  table.align tr:nth-child(even) td{background:rgba(169,130,60,0.05);}
+  table.align td.jd{
+    color:var(--ink-2);
+    font-weight:600;
+  }
+  table.align td.jd small{
+    display:block;
+    font-weight:400;
+    color:var(--text-soft);
+    margin-top:3px;
+  }
+
+  /* Expertise clusters */
+  .clusters{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .cluster{
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-top:3px solid var(--brass);
+    padding:20px 22px;
+  }
+  .cluster h4{
+    font-family:var(--serif);
+    font-size:16.5px;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .cluster ul{list-style:none;}
+  .cluster li{
+    font-size:13.6px;
+    color:var(--text);
+    padding-left:16px;
+    position:relative;
+    margin-bottom:9px;
+  }
+  .cluster li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--brass);
+  }
+  .cluster li b{color:var(--ink-2);}
+  .term{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--ledger-green);
+    background:rgba(47,93,69,0.08);
+    border:1px solid rgba(47,93,69,0.25);
+    padding:1px 6px;
+    border-radius:2px;
+    margin:2px 4px 0 0;
+  }
+  .term-row{margin-top:12px; display:flex; flex-wrap:wrap;}
+
+  /* O2C export pipeline */
+  .pipeline{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:0;
+    margin-top:8px;
     position:relative;
   }
-  .seg-core{ background:var(--green); width:75%; }
-  .seg-adj{ background:var(--amber); width:13%; }
-  .seg-growth{ background:var(--rust); width:12%; }
-
-  .aging-legend{
-    display:flex;
-    gap:28px;
-    margin-top:18px;
-    flex-wrap:wrap;
+  .pipeline::before{
+    content:"";
+    position:absolute;
+    top:34px;
+    left:4%;
+    right:4%;
+    height:1px;
+    background:repeating-linear-gradient(90deg, var(--brass) 0 6px, transparent 6px 12px);
+    z-index:0;
   }
-  .legend-item{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    line-height:1.5;
-    max-width:260px;
+  .p-step{
+    position:relative;
+    z-index:1;
+    padding:0 10px;
+    text-align:left;
   }
-  .legend-item .lg-dot{
-    display:inline-block;
-    width:8px;height:8px;
+  .p-num{
+    width:26px; height:26px;
     border-radius:50%;
-    margin-right:7px;
+    background:var(--ink);
+    color:#fff;
+    font-family:var(--mono);
+    font-size:11px;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:12px;
   }
-  .legend-item .lg-head{
-    font-family:'Inter',sans-serif;
+  .p-step h5{
+    font-family:var(--sans);
     font-weight:600;
-    color:var(--ink);
-    display:block;
-    margin-bottom:2px;
+    font-size:12.8px;
+    color:var(--ink-2);
+    margin-bottom:5px;
+    min-height:32px;
   }
-  .dot-core{ background:var(--green); }
-  .dot-adj{ background:var(--amber); }
-  .dot-growth{ background:var(--rust); }
-
-  /* ===== Systems tags ===== */
-  .tagrow{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    margin-top:14px;
-  }
-  .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    padding:6px 12px;
-    border:1px solid var(--brass-light);
-    border-radius:20px;
-    color:var(--ink);
-    background:rgba(216,198,163,0.18);
+  .p-step p{
+    font-size:11.8px;
+    color:var(--text-soft);
+    line-height:1.5;
   }
 
-  /* ===== Footer ===== */
-  .foot{
-    margin-top:60px;
-    padding-top:20px;
-    border-top:1px solid var(--paper-line);
+  /* Timeline */
+  .timeline{border-left:2px solid var(--rule); margin-left:6px; padding-left:26px;}
+  .t-item{position:relative; padding-bottom:26px;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{
+    content:"";
+    position:absolute;
+    left:-32px;
+    top:3px;
+    width:11px; height:11px;
+    border-radius:50%;
+    background:var(--paper-2);
+    border:2px solid var(--brass);
+  }
+  .t-item.credit::before{background:var(--brass); }
+  .t-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;}
+  .t-role{font-weight:600; font-size:14.5px; color:var(--ink);}
+  .t-org{font-size:13px; color:var(--text-soft); font-style:italic;}
+  .t-date{
+    margin-left:auto;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-soft);
+    white-space:nowrap;
+  }
+  .t-focus{font-size:12.8px; color:var(--text); margin-top:5px;}
+
+  /* Systems grid */
+  .systems{display:flex; flex-wrap:wrap; gap:10px;}
+  .sys-chip{
+    font-family:var(--mono);
+    font-size:12px;
+    padding:7px 13px;
+    border:1px solid var(--rule-dark);
+    color:var(--ink-2);
+    background:var(--paper-2);
+    border-radius:2px;
+  }
+  .sys-chip.core{background:var(--ink); color:#fff; border-color:var(--ink);}
+
+  /* KPI closing bar */
+  .close-bar{
+    background:var(--ink);
+    color:#EDE9DD;
+    padding:38px 56px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    color:var(--ink-soft);
+    flex-wrap:wrap;
+    gap:20px;
+    border-top:3px solid var(--brass);
   }
-  .stamp{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:13px;
-    color:var(--brass);
+  .close-bar h3{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:20px;
+    color:#fff;
   }
+  .close-bar p{font-size:13px; color:#AEB7C6; margin-top:6px; max-width:480px;}
+  .close-contact{
+    font-family:var(--mono);
+    font-size:12.5px;
+    text-align:right;
+    color:#D8DCE3;
+    line-height:1.8;
+  }
+  .close-contact b{color:var(--brass-light);}
 
-  @media (max-width:680px){
-    .sheet{ padding:36px 20px 60px; }
-    .letterhead{ flex-direction:column; align-items:flex-start; gap:14px; }
-    .doc-meta{ text-align:left; }
-    .kpi-grid{ grid-template-columns:1fr; }
-    .ledger, .ledger tbody, .ledger tr, .ledger td{ display:block; width:100%; }
-    .ledger td{ padding:6px 0; }
-    .ledger td.cat{ padding-top:16px; }
-    .ledger thead{ display:none; }
-    .contact-strip{ flex-wrap:wrap; gap:10px 18px; }
+  @media (max-width:760px){
+    header.hero, main, .close-bar{padding-left:24px; padding-right:24px;}
+    .ledger{grid-template-columns:1fr 1fr;}
+    .ledger-col:nth-child(2){border-right:none;}
+    .ledger-col{border-bottom:1px solid rgba(237,233,221,0.1);}
+    .clusters{grid-template-columns:1fr;}
+    table.align{font-size:12.6px;}
+    .pipeline{grid-template-columns:1fr 1fr; row-gap:26px;}
+    .pipeline::before{display:none;}
+    .close-bar{flex-direction:column; align-items:flex-start;}
+    .close-contact{text-align:left;}
+  }
+  @media print{
+    body{background:#fff;}
+    .sheet{max-width:100%;}
   }
 </style>
 </head>
 <body>
 <div class="sheet">
 
-  <div class="letterhead">
+  <header class="hero">
+    <div class="eyebrow">Job Alignment Portfolio</div>
+    <div class="hero-title">Samarjeet Jamwal</div>
+    <div class="hero-role">Debt Control · Credit Risk · Order-to-Cash Leadership</div>
+    <p class="hero-sub">20+ years across India, Kenya &amp; Ghana in FMCG, Dairy &amp; Beverage Manufacturing, Retail and Distribution — built around one discipline: turning receivables into cash, on time, with the ledger clean.</p>
+    <div class="hero-meta">
+      <span>✉ <b>samarjeetjamwal@gmail.com</b></span>
+      <span>☎ <b>+91 93179 50702</b></span>
+      <span>⌂ <b>Chandigarh, India</b></span>
+      <span>◆ <b>English · Hindi · Swahili (Professional)</b></span>
+    </div>
+    <div class="target">
+      Prepared for: <b>Manager – Operations &amp; Debt Control, Cway Group, Nigeria (Isolo BC)</b><br>
+      Purpose: a direct, evidence-based map from my credit control &amp; AR career to this role's mandate.
+    </div>
+  </header>
+
+  <!-- Signature ledger strip -->
+  <div class="ledger">
+    <div class="ledger-col">
+      <div class="ledger-bucket">Current</div>
+      <div class="ledger-figure">20+ yrs</div>
+      <div class="ledger-label">In Finance, Credit Control &amp; Commercial roles</div>
+    </div>
+    <div class="ledger-col">
+      <div class="ledger-bucket">0–30</div>
+      <div class="ledger-figure">18%</div>
+      <div class="ledger-label">YoY reduction in bad-debt provisioning, Kenya (distributor credit-scoring model)</div>
+    </div>
+    <div class="ledger-col">
+      <div class="ledger-bucket">31–60</div>
+      <div class="ledger-figure">135+</div>
+      <div class="ledger-label">Franchise/distributor accounts under AR &amp; credit control ownership</div>
+    </div>
+    <div class="ledger-col">
+      <div class="ledger-bucket">61–90+</div>
+      <div class="ledger-figure">3</div>
+      <div class="ledger-label">Markets led end-to-end: India, Kenya (East Africa) &amp; Ghana/Nigeria</div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- SECTION A: JD ALIGNMENT -->
+    <section>
+      <div class="sec-head">
+        <span class="sec-tab">A</span>
+        <span class="sec-title">Alignment to the Cway Mandate</span>
+        <span class="sec-note">Line-by-line vs. JD</span>
+      </div>
+      <p class="lede">Every core pillar of this JD — <b>debt control, credit risk, AR operations, KPI reporting, team leadership and stakeholder management</b> — has already been my day job, not adjacent experience.</p>
+
+      <table class="align">
+        <tr>
+          <th>JD Requirement</th>
+          <th>Where I've Already Done This</th>
+        </tr>
+        <tr>
+          <td class="jd">Collections strategy, escalation paths, DSO &amp; aging control<small>Own reminders, settlement guidelines, overdue buckets</small></td>
+          <td>Owned end-to-end collections and debt recovery for the Kenyan distributor market (RJ Corp / Devyani Food Industries); drove <b>aging-bucket-based collection strategies</b> that improved working capital and reduced DSO, with monthly AR aging and collection-forecast MIS to leadership.</td>
+        </tr>
+        <tr>
+          <td class="jd">Credit risk, credit limits, credit holds/release<small>Risk-based terms, policy &amp; exception handling</small></td>
+          <td>Built and ran a <b>distributor credit-scoring framework</b> to set risk-based credit limits and holds ahead of extending credit, flagging high-risk accounts early — contributed to an <b>18% YoY cut in bad-debt provisioning</b>. Also assessed Liquidity, Market (FX) and Operational/Compliance risk as a combined framework.</td>
+        </tr>
+        <tr>
+          <td class="jd">AR operations: invoicing integrity, allocations, reconciliations, dispute handling, month-end close</td>
+          <td>Managed <b>Accounts Receivable and Accounts Payable end-to-end</b> across multiple regions (Kenya, Ghana, India) — billing, cash allocation, customer reconciliations, unapplied-cash clean-up, and dispute resolution, alongside month-end close support and internal-control/AR-policy design.</td>
+        </tr>
+        <tr>
+          <td class="jd">AR dashboards, KPIs, forecasting, promise-to-pay tracking</td>
+          <td>Delivered monthly <b>AR aging, collection-forecast and cash-flow MIS</b> to leadership; later migrated recurring reports to an AI-automated MIS dashboard, cutting turnaround from multiple days to a few hours — a direct precedent for building this role's KPI dashboards.</td>
+        </tr>
+        <tr>
+          <td class="jd">Team leadership: coaching, targets, performance reviews, QA</td>
+          <td><b>Led and mentored finance/collections teams</b> to hit collection and operational targets in Kenya; set SOPs and quality checks for AR processes to keep error rates near zero.</td>
+        </tr>
+        <tr>
+          <td class="jd">Stakeholder management &amp; dispute resolution across Sales, Ops, Billing, Legal</td>
+          <td>Regularly reconciled billing/service disputes with customers and internal Sales/Ops teams; in construction, ran the equivalent discipline on <b>RA-bill and subcontractor reconciliation</b>, cutting approval turnaround from 10 days to 4 and reducing disputes.</td>
+        </tr>
+        <tr>
+          <td class="jd">Systems, controls &amp; compliance — AR tools (SAP), audit trails, write-off documentation</td>
+          <td>Hands-on <b>SAP ERP</b> user for AR/AP, BOM/costing and reconciliation modules, plus Tally, Wiza, Techsmith and Vesta ERP; maintained VAT/statutory compliance and audit-ready documentation across Kenyan and Ghanaian entities.</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- SECTION B: CORE CREDIT CONTROL EXPERTISE -->
+    <section>
+      <div class="sec-head">
+        <span class="sec-tab">B</span>
+        <span class="sec-title">Credit Control &amp; AR Expertise, In Detail</span>
+      </div>
+
+      <div class="clusters">
+        <div class="cluster">
+          <h4>Debt Recovery &amp; Collections</h4>
+          <ul>
+            <li>Ran <b>end-to-end collections</b> across the Kenyan distributor network — reminders through escalation to settlement, with measurable cash-flow improvement.</li>
+            <li>Built aging-based prioritisation to keep <b>overdue buckets (30/60/90+)</b> under control and reduce DSO.</li>
+            <li>Handled <b>customer reconciliations</b> and billing-dispute resolution as a standing function, not a one-off.</li>
+            <li>Introduced internal controls and AR policy to prevent recurring late-payment causes.</li>
+          </ul>
+          <div class="term-row">
+            <span class="term">DSO</span><span class="term">Aging Buckets</span><span class="term">Promise-to-Pay</span><span class="term">Debt Recovery</span>
+          </div>
+        </div>
+
+        <div class="cluster">
+          <h4>Credit Risk &amp; Policy</h4>
+          <ul>
+            <li>Designed a <b>distributor credit-scoring model</b> to set risk-based credit limits before extending terms.</li>
+            <li>Managed <b>credit holds/release</b> decisions tied to exposure and payment history.</li>
+            <li>Extended risk lens across <b>Credit, Liquidity, Market (FX) and Compliance risk</b> — not credit risk in isolation.</li>
+            <li>Result: <b>18% YoY reduction</b> in bad-debt provisioning through earlier risk flagging.</li>
+          </ul>
+          <div class="term-row">
+            <span class="term">Credit Scoring</span><span class="term">Credit Limits</span><span class="term">Bad-Debt Provisioning</span><span class="term">Risk-Based Terms</span>
+          </div>
+        </div>
+
+        <div class="cluster">
+          <h4>AR Operations &amp; Ledger Accuracy</h4>
+          <ul>
+            <li>Owned <b>invoicing, cash allocation and unapplied-cash clean-up</b> to keep customer ledgers accurate.</li>
+            <li>Ran <b>root-cause fixes</b> on billing/pricing issues blocking payment — not just chasing the symptom.</li>
+            <li>Delivered <b>month-end close support</b> for AR alongside plant/commercial finance teams.</li>
+            <li>Managed AR/AP across <b>135+ franchise accounts</b> (Koutons Retail) and multi-region distributor books (Kenya, Ghana).</li>
+          </ul>
+          <div class="term-row">
+            <span class="term">Invoicing Integrity</span><span class="term">Unapplied Cash</span><span class="term">Reconciliation</span><span class="term">Ledger Accuracy</span>
+          </div>
+        </div>
+
+        <div class="cluster">
+          <h4>Reporting, KPIs &amp; Compliance</h4>
+          <ul>
+            <li>Built recurring <b>AR aging, collection-effectiveness and bad-debt-risk dashboards</b> for leadership.</li>
+            <li>Migrated manual MIS to an <b>AI-automated dashboard</b>, cutting reporting time from days to hours.</li>
+            <li>Maintained <b>VAT/TDS and statutory compliance</b> across Kenyan and Ghanaian operations.</li>
+            <li>Supported audits with organised, evidence-backed documentation of credit and write-off decisions.</li>
+          </ul>
+          <div class="term-row">
+            <span class="term">KPI Dashboards</span><span class="term">Collection Effectiveness</span><span class="term">Write-off Docs</span><span class="term">Audit Trail</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION C: O2C EXPORT PIPELINE -->
+    <section>
+      <div class="sec-head">
+        <span class="sec-tab">C</span>
+        <span class="sec-title">Order-to-Cash — Export Sale, Proforma to Collection</span>
+      </div>
+      <p class="lede">In distributor/export markets, I've owned the <b>full O2C cycle</b> — not just the collections tail end — which is what lets a debt control function actually prevent disputes upstream instead of just chasing them downstream.</p>
+
+      <div class="pipeline">
+        <div class="p-step">
+          <div class="p-num">1</div>
+          <h5>Proforma Invoice</h5>
+          <p>Issued/verified proforma against agreed pricing, credit terms and distributor credit limit before order release.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-num">2</div>
+          <h5>Order &amp; Credit Check</h5>
+          <p>Ran the order against the customer's live credit-risk score; cleared or held based on exposure.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-num">3</div>
+          <h5>Dispatch Documentation</h5>
+          <p>Coordinated shipment/logistics docs so invoicing matched what was actually dispatched — no leakage from mismatched paperwork.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-num">4</div>
+          <h5>Commercial Invoice</h5>
+          <p>Raised the final invoice, applying agreed terms, deductions and statutory (VAT) treatment accurately.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-num">5</div>
+          <h5>Follow-up &amp; Collection</h5>
+          <p>Tracked promise-to-pay against due date; escalated per the aging bucket the account fell into.</p>
+        </div>
+        <div class="p-step">
+          <div class="p-num">6</div>
+          <h5>Cash Application &amp; Ledger Close</h5>
+          <p>Applied cash, reconciled the customer account, and closed the ledger clean — ready for the next credit cycle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION D: CAREER TIMELINE -->
+    <section>
+      <div class="sec-head">
+        <span class="sec-tab">D</span>
+        <span class="sec-title">Career Timeline — Credit &amp; Commercial Track</span>
+        <span class="sec-note">Brass marker = direct credit control mandate</span>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-head">
+            <span class="t-role">Sr. Manager – Accounts &amp; Commercial</span>
+            <span class="t-org">TSI Architects &amp; Engineers, India</span>
+            <span class="t-date">May 2023 – Current</span>
+          </div>
+          <p class="t-focus">Contract billing, RA-bill certification and reconciliation discipline that mirrors AR dispute-resolution and ledger-accuracy work.</p>
+        </div>
+        <div class="t-item credit">
+          <div class="t-head">
+            <span class="t-role">Manager – Credit Control (+ Logistics)</span>
+            <span class="t-org">RJ Corp / Devyani Food Industries, Nairobi, Kenya</span>
+            <span class="t-date">Nov 2015 – May 2023</span>
+          </div>
+          <p class="t-focus">Core credit control mandate: AR, collections, distributor credit-scoring, DSO management, 18% YoY bad-debt reduction.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-head">
+            <span class="t-role">Manager – Finance, Accounts &amp; Commercial</span>
+            <span class="t-org">Hiralco Limited, Accra, Ghana</span>
+            <span class="t-date">Jan 2015 – Aug 2015</span>
+          </div>
+          <p class="t-focus">Finance operations across Ghana &amp; Nigeria — budgeting, cash flow, VAT and statutory compliance.</p>
+        </div>
+        <div class="t-item credit">
+          <div class="t-head">
+            <span class="t-role">Asst. Manager – Accounts Receivable</span>
+            <span class="t-org">Faces Cosmetics India Ltd, Gurgaon</span>
+            <span class="t-date">Apr 2010 – Jan 2015</span>
+          </div>
+          <p class="t-focus">AR/AP across multiple regions — billing, collections, distributor accounts, aging reports, proactive credit monitoring.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-head">
+            <span class="t-role">Sr. Executive – Accounts &amp; Commercial</span>
+            <span class="t-org">Koutons Retail India Ltd, Gurgaon</span>
+            <span class="t-date">Oct 2004 – Jan 2010</span>
+          </div>
+          <p class="t-focus">Financial operations for 135+ franchise stores — reconciliations, VAT compliance, escrow and bank guarantees.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-head">
+            <span class="t-role">Account Executive</span>
+            <span class="t-org">Nathpa Jhakri Joint Venture, H.P., India</span>
+            <span class="t-date">Aug 2000 – Sep 2004</span>
+          </div>
+          <p class="t-focus">Ledger maintenance, reconciliations and transaction processing — the foundation the rest was built on.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION E: SYSTEMS -->
+    <section>
+      <div class="sec-head">
+        <span class="sec-tab">E</span>
+        <span class="sec-title">Systems, Tools &amp; Education</span>
+      </div>
+      <div class="systems" style="margin-bottom:22px;">
+        <span class="sys-chip core">SAP ERP</span>
+        <span class="sys-chip">Tally ERP</span>
+        <span class="sys-chip">Wiza ERP</span>
+        <span class="sys-chip">Techsmith ERP</span>
+        <span class="sys-chip">Vesta ERP</span>
+        <span class="sys-chip">Advanced Excel</span>
+        <span class="sys-chip">Microsoft 365 Copilot</span>
+        <span class="sys-chip">AI-Automated MIS (Claude, Grok, DeepSeek)</span>
+      </div>
+      <p class="lede" style="margin-bottom:6px;"><b>MBA – Finance</b>, School of Management Studies (2005) · <b>M.Com</b>, Vallabh Govt. P.G. College (1999) · <b>Certificate — Advanced Computer Accounts</b></p>
+    </section>
+
+  </main>
+
+  <div class="close-bar">
     <div>
-      <h1>Samarjeet Jamwal</h1>
-      <div class="role">Targeting — Operations &amp; Debt Control Manager, Cway (Lagos, Nigeria)</div>
+      <h3>Ready to bring this discipline to Cway Group's ledger.</h3>
+      <p>References and detailed CV available on request. Prepared specifically for the Manager – Operations &amp; Debt Control role, Isolo BC, Nigeria.</p>
     </div>
-    <div class="doc-meta">
-      <div class="doc-title">Statement of Alignment</div>
-      Ref&nbsp;No. OPS‑DC‑2026‑08<br>
-      Prepared&nbsp;10 Aug 2026
+    <div class="close-contact">
+      <b>Samarjeet Jamwal</b><br>
+      samarjeetjamwal@gmail.com<br>
+      +91 93179 50702 · Chandigarh, India
     </div>
-  </div>
-
-  <div class="contact-strip">
-    <span>Chandigarh, India</span>
-    <span>+91 93179 50702</span>
-    <span>samarjeetjamwal@gmail.com</span>
-  </div>
-
-  <p class="summary">
-    Twenty‑plus years spent on the receiving end of exactly this brief — reading aging buckets, holding
-    the line on credit limits, and being the person a General Manager calls when collections stall.
-    Across <em>FMCG dairy &amp; beverage manufacturing in Kenya</em>, cosmetics distribution in India, retail
-    franchising, and now large‑scale construction commercial management, the throughline is the same
-    discipline the Cway role asks for: turn overdue receivables into cash, without burning the
-    customer relationship down to do it.
-  </p>
-
-  <div class="section-head">
-    <span class="section-num">01</span>
-    <h2>Statement of Alignment — by responsibility area</h2>
-  </div>
-
-  <table class="ledger">
-    <thead>
-      <tr>
-        <th>JD Responsibility</th>
-        <th>Evidence on File</th>
-        <th>Standing</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="cat">Debt Control &amp; Collections</td>
-        <td class="evi">Owned end‑to‑end AR, credit control and collections for the Kenyan market at Devyani Food
-          Industries (RJ Corp) for 7.5 years; drove aging analysis and collection strategy that measurably
-          improved working capital and DSO.</td>
-        <td class="stat"><span class="badge strong">Strong match</span></td>
-      </tr>
-      <tr>
-        <td class="cat">Credit Risk &amp; Policy</td>
-        <td class="evi">Built and ran a distributor credit‑scoring framework ahead of extending credit limits;
-          flagged high‑risk accounts early enough to contribute to an 18% year‑on‑year cut in bad‑debt
-          provisioning.</td>
-        <td class="stat"><span class="badge strong">Strong match</span></td>
-      </tr>
-      <tr>
-        <td class="cat">AR Operations &amp; Process Ownership</td>
-        <td class="evi">Has carried AR and AP jointly (Faces Cosmetics), reconciliations and dispute handling
-          (Devyani, Faces), and unapplied‑cash / ledger‑accuracy work as a standing part of every finance
-          role since 2004.</td>
-        <td class="stat"><span class="badge strong">Strong match</span></td>
-      </tr>
-      <tr>
-        <td class="cat">Reporting, KPIs &amp; Forecasting</td>
-        <td class="evi">Delivered monthly AR aging, collection forecast and cash‑flow MIS to leadership; later
-          migrated recurring reporting onto an AI‑automated dashboard, cutting turnaround from multiple
-          days to hours.</td>
-        <td class="stat"><span class="badge strong">Strong match</span></td>
-      </tr>
-      <tr>
-        <td class="cat">Team Leadership</td>
-        <td class="evi">Led and mentored finance/collections teams toward set targets at Devyani; currently
-          runs commercial and cost‑control functions for concurrent construction projects.</td>
-        <td class="stat"><span class="badge strong">Strong match</span></td>
-      </tr>
-      <tr>
-        <td class="cat">Stakeholder Mgmt. &amp; Dispute Resolution</td>
-        <td class="evi">Regular cross‑functional work with Sales, Logistics, Engineering and vendors; resolved a
-          contested yield‑variance dispute at Devyani by tracing a process root cause rather than assuming
-          fraud — a useful instinct for AR dispute cycles too.</td>
-        <td class="stat"><span class="badge strong">Strong match</span>
-          <span class="stat-note">Construction‑side dispute work (BOQ/RA billing) is B2B contract disputes, not
-          consumer/distributor short‑pay disputes — adjacent rather than identical.</span></td>
-      </tr>
-      <tr>
-        <td class="cat">Systems, Controls &amp; Compliance</td>
-        <td class="evi">SAP ERP across two employers (incl. AR/credit modules), plus Tally, Wiza, Techsmith and
-          Vesta ERP exposure; VAT/TDS/statutory compliance and audit support in every role on the CV.</td>
-        <td class="stat"><span class="badge strong">Strong match</span></td>
-      </tr>
-      <tr>
-        <td class="cat">Debt Sale / Legal Escalation</td>
-        <td class="evi">CV shows escalation via credit holds, credit‑scoring and collections pressure, but no
-          explicit third‑party debt‑sale or litigation hand‑off is documented.</td>
-        <td class="stat"><span class="badge watch">Worth confirming</span>
-          <span class="stat-note">Likely covered in practice — flag it as a question for the interview
-          rather than a gap to over‑explain.</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="section-head">
-    <span class="section-num">02</span>
-    <h2>KPI ledger — numbers the JD's own KPI list would recognise</h2>
-  </div>
-
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-figure">18%</div>
-      <div class="kpi-label">YoY reduction in bad‑debt provisioning</div>
-      <div class="kpi-sub">Devyani Food Industries, Kenya</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-figure">Days→Hrs</div>
-      <div class="kpi-label">AR/cash‑flow MIS turnaround after automation</div>
-      <div class="kpi-sub">Devyani Food Industries, Kenya</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-figure">10→4</div>
-      <div class="kpi-label">Days to approve RA bills, post reconciliation checklist</div>
-      <div class="kpi-sub">TSI Architects &amp; Engineers</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-figure">15–20%</div>
-      <div class="kpi-label">Procurement cost savings through sourcing</div>
-      <div class="kpi-sub">TSI Architects &amp; Engineers</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-figure">~10%</div>
-      <div class="kpi-label">Logistics cost reduction via route optimisation</div>
-      <div class="kpi-sub">Devyani Food Industries, Kenya</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-figure">20+ yrs</div>
-      <div class="kpi-label">AR, credit control &amp; commercial finance experience</div>
-      <div class="kpi-sub">India · Kenya · Ghana</div>
-    </div>
-  </div>
-
-  <div class="section-head">
-    <span class="section-num">03</span>
-    <h2>Alignment aging schedule</h2>
-  </div>
-
-  <div class="aging-wrap">
-    <div class="aging-title">Share of JD requirements, by how directly the CV covers them</div>
-    <div class="aging-bar">
-      <div class="aging-seg seg-core">75%</div>
-      <div class="aging-seg seg-adj">13%</div>
-      <div class="aging-seg seg-growth">12%</div>
-    </div>
-    <div class="aging-legend">
-      <div class="legend-item">
-        <span class="lg-head"><span class="lg-dot dot-core"></span>Core match — 0–30</span>
-        Direct, repeated experience: collections, credit risk, AR ops, reporting, ERP, team leadership.
-      </div>
-      <div class="legend-item">
-        <span class="lg-head"><span class="lg-dot dot-adj"></span>Transferable — 31–60</span>
-        Adjacent experience from construction‑contract disputes and vendor negotiation, not FMCG‑specific
-        but the same underlying skill.
-      </div>
-      <div class="legend-item">
-        <span class="lg-head"><span class="lg-dot dot-growth"></span>To confirm — 60+</span>
-        Formal debt‑sale/legal‑escalation process — not explicit on the CV; worth a direct question in
-        interview.
-      </div>
-    </div>
-    <div class="tagrow">
-      <span class="tag">SAP ERP</span>
-      <span class="tag">Tally ERP</span>
-      <span class="tag">Order‑to‑Cash</span>
-      <span class="tag">DSO Reduction</span>
-      <span class="tag">Credit Scoring</span>
-      <span class="tag">Aging Analysis</span>
-      <span class="tag">Dispute Resolution</span>
-      <span class="tag">MBA — Finance</span>
-    </div>
-  </div>
-
-  <div class="foot">
-    <span>Prepared for Cway — Operations &amp; Debt Control Manager, Lagos</span>
-    <span class="stamp">Balance carried forward, in full</span>
   </div>
 
 </div>
