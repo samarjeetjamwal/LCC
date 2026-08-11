@@ -3,683 +3,623 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samarjeet Jamwal — Job Alignment Portfolio | Cway Group, Nigeria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Distributor Credit-Scoring Model — Complete Interactive Guide</title>
 <style>
-  :root{
-    --ink:#0E2238;
-    --ink-2:#16324F;
-    --paper:#EFEDE4;
-    --paper-2:#F7F5EF;
-    --brass:#A9823C;
-    --brass-light:#C9A868;
-    --ledger-green:#2F5D45;
-    --overdue:#8C3B2E;
-    --text:#1B2430;
-    --text-soft:#4C5566;
-    --rule:#D3CDBC;
-    --rule-dark:#3A5170;
-    --serif:'Source Serif 4', serif;
-    --sans:'Inter', sans-serif;
-    --mono:'IBM Plex Mono', monospace;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{
-    background:var(--paper);
-    color:var(--text);
-    font-family:var(--sans);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  .sheet{max-width:1040px; margin:0 auto; background:var(--paper-2);}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:#eef2f7;color:#1f2937;line-height:1.65}
 
-  /* ============ HEADER ============ */
-  header.hero{
-    background:
-      radial-gradient(1100px 480px at 85% -120px, rgba(169,130,60,0.18), transparent 60%),
-      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
-    color:#EDE9DD;
-    padding:56px 56px 42px;
-    position:relative;
-    border-bottom:3px solid var(--brass);
-  }
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:11.5px;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    color:var(--brass-light);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:22px;
-  }
-  .eyebrow::after{content:""; height:1px; flex:1; background:rgba(201,168,104,0.35);}
-  .hero-title{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:clamp(32px,4.4vw,50px);
-    letter-spacing:-0.01em;
-    color:#fff;
-  }
-  .hero-role{
-    font-family:var(--mono);
-    font-size:13.5px;
-    letter-spacing:.06em;
-    color:var(--brass-light);
-    margin-top:10px;
-    text-transform:uppercase;
-  }
-  .hero-sub{
-    max-width:640px;
-    margin-top:18px;
-    font-size:15.5px;
-    color:#C7CEDA;
-  }
-  .hero-meta{
-    margin-top:28px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:22px;
-    font-family:var(--mono);
-    font-size:12.5px;
-    color:#B9C2D1;
-  }
-  .hero-meta span{display:flex; align-items:center; gap:7px;}
-  .hero-meta b{color:#EDE9DD; font-weight:500;}
-  .target{
-    margin-top:26px;
-    padding:14px 18px;
-    border:1px solid rgba(201,168,104,0.4);
-    border-left:3px solid var(--brass);
-    background:rgba(255,255,255,0.03);
-    font-size:13.5px;
-    color:#D8DCE3;
-    max-width:640px;
-  }
-  .target b{color:#fff;}
+  /* ---------- HEADER / TOOLBAR ---------- */
+  header.top{position:sticky;top:0;z-index:100;color:#fff;
+    background:linear-gradient(135deg,#0b1f4b,#1e3a8a 60%,#2563eb);
+    padding:16px 22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+  header.top h1{font-size:1.35rem;letter-spacing:.3px}
+  header.top p{font-size:.85rem;opacity:.85}
+  .toolbar{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+  .btn{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);
+    color:#fff;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:.82rem}
+  .btn:hover{background:rgba(255,255,255,.28)}
+  #tocToggle{display:none}
+  #progress{position:absolute;left:0;bottom:0;height:4px;background:#fbbf24;width:0;transition:width .1s}
 
-  /* ============ LEDGER STRIP (signature element) ============ */
-  .ledger{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:var(--ink-2);
-    border-bottom:1px solid rgba(201,168,104,0.25);
-  }
-  .ledger-col{
-    padding:22px 20px;
-    border-right:1px solid rgba(237,233,221,0.1);
-  }
-  .ledger-col:last-child{border-right:none;}
-  .ledger-bucket{
-    font-family:var(--mono);
-    font-size:10.5px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--brass-light);
-    margin-bottom:8px;
-  }
-  .ledger-figure{
-    font-family:var(--serif);
-    font-size:28px;
-    font-weight:600;
-    color:#fff;
-  }
-  .ledger-label{
-    font-size:12px;
-    color:#AEB7C6;
-    margin-top:4px;
-    line-height:1.4;
-  }
+  /* ---------- LAYOUT ---------- */
+  .layout{display:grid;grid-template-columns:300px 1fr;gap:20px;max-width:1400px;margin:22px auto;padding:0 16px}
 
-  /* ============ SECTIONS ============ */
-  main{padding:50px 56px 20px;}
-  section{margin-bottom:52px;}
-  .sec-head{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    margin-bottom:22px;
-    border-bottom:1px solid var(--rule);
-    padding-bottom:12px;
-  }
-  .sec-tab{
-    font-family:var(--mono);
-    font-size:12px;
-    letter-spacing:.1em;
-    color:#fff;
-    background:var(--ink);
-    padding:4px 10px;
-    border-radius:2px;
-    flex-shrink:0;
-  }
-  .sec-title{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:23px;
-    color:var(--ink);
-  }
-  .sec-note{
-    font-family:var(--mono);
-    font-size:11px;
-    color:var(--text-soft);
-    margin-left:auto;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-  }
+  /* ---------- SIDEBAR (ALL HEADS) ---------- */
+  nav#toc{position:sticky;top:96px;align-self:start;background:#fff;border-radius:12px;
+    box-shadow:0 2px 10px rgba(15,23,42,.12);padding:14px;max-height:calc(100vh - 120px);overflow:auto}
+  nav#toc h3{font-size:.95rem;color:#1e3a8a;margin-bottom:8px}
+  #tocSearch{width:100%;padding:7px 10px;border:1px solid #cbd5e1;border-radius:8px;margin-bottom:10px;font-size:.85rem}
+  #tocList{list-style:none}
+  #tocList a{display:block;padding:6px 9px;margin:2px 0;border-radius:8px;color:#334155;
+    text-decoration:none;font-size:.85rem;border-left:3px solid transparent}
+  #tocList a:hover{background:#eff6ff;color:#1e3a8a}
+  #tocList a.active{background:#1e3a8a;color:#fff;border-left-color:#fbbf24}
+  #tocList .n{display:inline-block;min-width:24px;font-weight:700;color:#2563eb}
+  #tocList a.active .n{color:#fbbf24}
 
-  .lede{
-    font-size:15.5px;
-    color:var(--text-soft);
-    max-width:760px;
-    margin-bottom:8px;
-  }
-  .lede b{color:var(--text);}
+  /* ---------- SECTION CARDS ---------- */
+  section.card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(15,23,42,.10);
+    padding:20px 24px;margin-bottom:18px;scroll-margin-top:110px}
+  section.card h2{font-size:1.12rem;color:#0b1f4b;cursor:pointer;padding-bottom:8px;
+    border-bottom:2px solid #e2e8f0;display:flex;align-items:center;gap:10px}
+  section.card h2::after{content:"▾";margin-left:auto;color:#2563eb;transition:transform .2s}
+  section.card.collapsed h2::after{transform:rotate(-90deg)}
+  section.card.collapsed .content{display:none}
+  .num{background:#1e3a8a;color:#fff;border-radius:8px;padding:2px 9px;font-size:.85rem}
+  .content{padding-top:12px}
+  h3{color:#1e3a8a;margin:16px 0 6px;font-size:.98rem}
+  p{margin:8px 0;font-size:.92rem}
+  ul,ol{margin:8px 0 8px 22px;font-size:.92rem}
+  li{margin:3px 0}
+  strong{color:#0b1f4b}
 
-  /* Alignment table */
-  table.align{
-    width:100%;
-    border-collapse:collapse;
-    font-size:13.8px;
-  }
-  table.align th{
-    text-align:left;
-    font-family:var(--mono);
-    font-size:10.5px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:#fff;
-    background:var(--ink);
-    padding:10px 14px;
-  }
-  table.align th:first-child{width:32%;}
-  table.align td{
-    padding:13px 14px;
-    border-bottom:1px solid var(--rule);
-    vertical-align:top;
-    color:var(--text);
-  }
-  table.align tr:nth-child(even) td{background:rgba(169,130,60,0.05);}
-  table.align td.jd{
-    color:var(--ink-2);
-    font-weight:600;
-  }
-  table.align td.jd small{
-    display:block;
-    font-weight:400;
-    color:var(--text-soft);
-    margin-top:3px;
-  }
+  /* ---------- TABLES ---------- */
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.88rem}
+  th,td{border:1px solid #e2e8f0;padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#1e3a8a;color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:#f8fafc}
 
-  /* Expertise clusters */
-  .clusters{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-  }
-  .cluster{
-    background:var(--paper);
-    border:1px solid var(--rule);
-    border-top:3px solid var(--brass);
-    padding:20px 22px;
-  }
-  .cluster h4{
-    font-family:var(--serif);
-    font-size:16.5px;
-    color:var(--ink);
-    margin-bottom:10px;
-  }
-  .cluster ul{list-style:none;}
-  .cluster li{
-    font-size:13.6px;
-    color:var(--text);
-    padding-left:16px;
-    position:relative;
-    margin-bottom:9px;
-  }
-  .cluster li::before{
-    content:"—";
-    position:absolute;
-    left:0;
-    color:var(--brass);
-  }
-  .cluster li b{color:var(--ink-2);}
-  .term{
-    display:inline-block;
-    font-family:var(--mono);
-    font-size:10.5px;
-    color:var(--ledger-green);
-    background:rgba(47,93,69,0.08);
-    border:1px solid rgba(47,93,69,0.25);
-    padding:1px 6px;
-    border-radius:2px;
-    margin:2px 4px 0 0;
-  }
-  .term-row{margin-top:12px; display:flex; flex-wrap:wrap;}
+  /* ---------- BOXES ---------- */
+  .note{background:#eff6ff;border-left:4px solid #2563eb;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:.9rem}
+  .warn{background:#fef2f2;border-left:4px solid #dc2626;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:.9rem}
+  .ok{background:#f0fdf4;border-left:4px solid #16a34a;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:.9rem}
+  .formula{background:#fffbeb;border:1px dashed #f59e0b;padding:10px;border-radius:8px;margin:12px 0;
+    font-family:Consolas,monospace;text-align:center;font-size:.92rem}
+  .prompt{background:#0f172a;color:#e2e8f0;font-family:Consolas,monospace;font-size:.84rem;
+    padding:12px 14px;border-radius:8px;margin:10px 0;white-space:pre-wrap}
+  .report{background:#052e16;color:#d1fae5;font-family:Consolas,monospace;font-size:.85rem;
+    padding:14px;border-radius:8px;margin:10px 0;white-space:pre-wrap}
 
-  /* O2C export pipeline */
-  .pipeline{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:0;
-    margin-top:8px;
-    position:relative;
-  }
-  .pipeline::before{
-    content:"";
-    position:absolute;
-    top:34px;
-    left:4%;
-    right:4%;
-    height:1px;
-    background:repeating-linear-gradient(90deg, var(--brass) 0 6px, transparent 6px 12px);
-    z-index:0;
-  }
-  .p-step{
-    position:relative;
-    z-index:1;
-    padding:0 10px;
-    text-align:left;
-  }
-  .p-num{
-    width:26px; height:26px;
-    border-radius:50%;
-    background:var(--ink);
-    color:#fff;
-    font-family:var(--mono);
-    font-size:11px;
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:12px;
-  }
-  .p-step h5{
-    font-family:var(--sans);
-    font-weight:600;
-    font-size:12.8px;
-    color:var(--ink-2);
-    margin-bottom:5px;
-    min-height:32px;
-  }
-  .p-step p{
-    font-size:11.8px;
-    color:var(--text-soft);
-    line-height:1.5;
-  }
+  /* ---------- MISC ---------- */
+  #toTop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
+    background:#1e3a8a;color:#fff;border:none;font-size:1.2rem;cursor:pointer;display:none;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:200}
+  footer{text-align:center;padding:20px;font-size:.8rem;color:#64748b}
 
-  /* Timeline */
-  .timeline{border-left:2px solid var(--rule); margin-left:6px; padding-left:26px;}
-  .t-item{position:relative; padding-bottom:26px;}
-  .t-item:last-child{padding-bottom:0;}
-  .t-item::before{
-    content:"";
-    position:absolute;
-    left:-32px;
-    top:3px;
-    width:11px; height:11px;
-    border-radius:50%;
-    background:var(--paper-2);
-    border:2px solid var(--brass);
-  }
-  .t-item.credit::before{background:var(--brass); }
-  .t-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;}
-  .t-role{font-weight:600; font-size:14.5px; color:var(--ink);}
-  .t-org{font-size:13px; color:var(--text-soft); font-style:italic;}
-  .t-date{
-    margin-left:auto;
-    font-family:var(--mono);
-    font-size:11px;
-    color:var(--text-soft);
-    white-space:nowrap;
-  }
-  .t-focus{font-size:12.8px; color:var(--text); margin-top:5px;}
-
-  /* Systems grid */
-  .systems{display:flex; flex-wrap:wrap; gap:10px;}
-  .sys-chip{
-    font-family:var(--mono);
-    font-size:12px;
-    padding:7px 13px;
-    border:1px solid var(--rule-dark);
-    color:var(--ink-2);
-    background:var(--paper-2);
-    border-radius:2px;
-  }
-  .sys-chip.core{background:var(--ink); color:#fff; border-color:var(--ink);}
-
-  /* KPI closing bar */
-  .close-bar{
-    background:var(--ink);
-    color:#EDE9DD;
-    padding:38px 56px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:20px;
-    border-top:3px solid var(--brass);
-  }
-  .close-bar h3{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:20px;
-    color:#fff;
-  }
-  .close-bar p{font-size:13px; color:#AEB7C6; margin-top:6px; max-width:480px;}
-  .close-contact{
-    font-family:var(--mono);
-    font-size:12.5px;
-    text-align:right;
-    color:#D8DCE3;
-    line-height:1.8;
-  }
-  .close-contact b{color:var(--brass-light);}
-
-  @media (max-width:760px){
-    header.hero, main, .close-bar{padding-left:24px; padding-right:24px;}
-    .ledger{grid-template-columns:1fr 1fr;}
-    .ledger-col:nth-child(2){border-right:none;}
-    .ledger-col{border-bottom:1px solid rgba(237,233,221,0.1);}
-    .clusters{grid-template-columns:1fr;}
-    table.align{font-size:12.6px;}
-    .pipeline{grid-template-columns:1fr 1fr; row-gap:26px;}
-    .pipeline::before{display:none;}
-    .close-bar{flex-direction:column; align-items:flex-start;}
-    .close-contact{text-align:left;}
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr}
+    nav#toc{position:static;max-height:none;display:none}
+    body.show-toc nav#toc{display:block}
+    #tocToggle{display:inline-block}
   }
   @media print{
-    body{background:#fff;}
-    .sheet{max-width:100%;}
+    header.top,nav#toc,#toTop,.toolbar{display:none!important}
+    section.card .content{display:block!important}
+    .layout{grid-template-columns:1fr}
   }
 </style>
 </head>
 <body>
-<div class="sheet">
 
-  <header class="hero">
-    <div class="eyebrow">Job Alignment Portfolio</div>
-    <div class="hero-title">Samarjeet Jamwal</div>
-    <div class="hero-role">Debt Control · Credit Risk · Order-to-Cash Leadership</div>
-    <p class="hero-sub">20+ years across India, Kenya &amp; Ghana in FMCG, Dairy &amp; Beverage Manufacturing, Retail and Distribution — built around one discipline: turning receivables into cash, on time, with the ledger clean.</p>
-    <div class="hero-meta">
-      <span>✉ <b>samarjeetjamwal@gmail.com</b></span>
-      <span>☎ <b>+91 93179 50702</b></span>
-      <span>⌂ <b>Chandigarh, India</b></span>
-      <span>◆ <b>English · Hindi · Swahili (Professional)</b></span>
-    </div>
-    <div class="target">
-      Prepared for: <b>Manager – Operations &amp; Debt Control, Cway Group, Nigeria (Isolo BC)</b><br>
-      Purpose: a direct, evidence-based map from my credit control &amp; AR career to this role's mandate.
-    </div>
-  </header>
-
-  <!-- Signature ledger strip -->
-  <div class="ledger">
-    <div class="ledger-col">
-      <div class="ledger-bucket">Current</div>
-      <div class="ledger-figure">20+ yrs</div>
-      <div class="ledger-label">In Finance, Credit Control &amp; Commercial roles</div>
-    </div>
-    <div class="ledger-col">
-      <div class="ledger-bucket">0–30</div>
-      <div class="ledger-figure">18%</div>
-      <div class="ledger-label">YoY reduction in bad-debt provisioning, Kenya (distributor credit-scoring model)</div>
-    </div>
-    <div class="ledger-col">
-      <div class="ledger-bucket">31–60</div>
-      <div class="ledger-figure">135+</div>
-      <div class="ledger-label">Franchise/distributor accounts under AR &amp; credit control ownership</div>
-    </div>
-    <div class="ledger-col">
-      <div class="ledger-bucket">61–90+</div>
-      <div class="ledger-figure">3</div>
-      <div class="ledger-label">Markets led end-to-end: India, Kenya (East Africa) &amp; Ghana/Nigeria</div>
-    </div>
+<header class="top">
+  <h1>📘 Distributor Credit‑Scoring Model — Complete Interactive Guide</h1>
+  <p>Click any Head in the sidebar to jump to it instantly · Click a section title to collapse/expand it</p>
+  <div class="toolbar">
+    <button class="btn" id="expandAll">📖 Expand All Heads</button>
+    <button class="btn" id="collapseAll">🗂 Collapse All Heads</button>
+    <button class="btn" onclick="window.print()">🖨 Print / Save PDF</button>
+    <button class="btn" id="tocToggle">☰ Contents</button>
   </div>
+  <div id="progress"></div>
+</header>
 
-  <main>
+<div class="layout">
 
-    <!-- SECTION A: JD ALIGNMENT -->
-    <section>
-      <div class="sec-head">
-        <span class="sec-tab">A</span>
-        <span class="sec-title">Alignment to the Cway Mandate</span>
-        <span class="sec-note">Line-by-line vs. JD</span>
-      </div>
-      <p class="lede">Every core pillar of this JD — <b>debt control, credit risk, AR operations, KPI reporting, team leadership and stakeholder management</b> — has already been my day job, not adjacent experience.</p>
+<!-- ================= SIDEBAR : ALL HEADS ================= -->
+<nav id="toc">
+  <h3>ALL HEADS — ONE‑CLICK NAVIGATION</h3>
+  <input id="tocSearch" type="text" placeholder="🔍 Search heads…">
+  <ul id="tocList">
+    <li><a href="#s1"><span class="n">1</span> What is a distributor credit score?</a></li>
+    <li><a href="#s2"><span class="n">2</span> Simple example scorecard</a></li>
+    <li><a href="#s3"><span class="n">3</span> Example credit policy by score</a></li>
+    <li><a href="#s4"><span class="n">4</span> Types of credit‑scoring models</a></li>
+    <li><a href="#s5"><span class="n">5</span> Data needed for the model</a></li>
+    <li><a href="#s6"><span class="n">6</span> Example AI features (variables)</a></li>
+    <li><a href="#s7"><span class="n">7</span> Simple rule‑based model</a></li>
+    <li><a href="#s8"><span class="n">8</span> Advanced weighted scorecard</a></li>
+    <li><a href="#s9"><span class="n">9</span> How AI can help you</a></li>
+    <li><a href="#s10"><span class="n">10</span> Step‑by‑step model build</a></li>
+    <li><a href="#s11"><span class="n">11</span> Practical AI model example</a></li>
+    <li><a href="#s12"><span class="n">12</span> AI‑generated scorecard example</a></li>
+    <li><a href="#s13"><span class="n">13</span> How GenAI specifically helps</a></li>
+    <li><a href="#s14"><span class="n">14</span> Risks when using AI</a></li>
+    <li><a href="#s15"><span class="n">15</span> Implementation roadmap (4 phases)</a></li>
+    <li><a href="#s16"><span class="n">16</span> Minimum data to start</a></li>
+    <li><a href="#s17"><span class="n">17</span> Credit‑risk dashboard example</a></li>
+    <li><a href="#s18"><span class="n">18</span> AI recommendation engine example</a></li>
+    <li><a href="#s19"><span class="n">19</span> Quick manual formula</a></li>
+    <li><a href="#s20"><span class="n">20</span> Build faster with AI prompts</a></li>
+    <li><a href="#s21"><span class="n">21</span> Recommended final design</a></li>
+    <li><a href="#s22"><span class="n">22</span> Summary</a></li>
+  </ul>
+</nav>
 
-      <table class="align">
-        <tr>
-          <th>JD Requirement</th>
-          <th>Where I've Already Done This</th>
-        </tr>
-        <tr>
-          <td class="jd">Collections strategy, escalation paths, DSO &amp; aging control<small>Own reminders, settlement guidelines, overdue buckets</small></td>
-          <td>Owned end-to-end collections and debt recovery for the Kenyan distributor market (RJ Corp / Devyani Food Industries); drove <b>aging-bucket-based collection strategies</b> that improved working capital and reduced DSO, with monthly AR aging and collection-forecast MIS to leadership.</td>
-        </tr>
-        <tr>
-          <td class="jd">Credit risk, credit limits, credit holds/release<small>Risk-based terms, policy &amp; exception handling</small></td>
-          <td>Built and ran a <b>distributor credit-scoring framework</b> to set risk-based credit limits and holds ahead of extending credit, flagging high-risk accounts early — contributed to an <b>18% YoY cut in bad-debt provisioning</b>. Also assessed Liquidity, Market (FX) and Operational/Compliance risk as a combined framework.</td>
-        </tr>
-        <tr>
-          <td class="jd">AR operations: invoicing integrity, allocations, reconciliations, dispute handling, month-end close</td>
-          <td>Managed <b>Accounts Receivable and Accounts Payable end-to-end</b> across multiple regions (Kenya, Ghana, India) — billing, cash allocation, customer reconciliations, unapplied-cash clean-up, and dispute resolution, alongside month-end close support and internal-control/AR-policy design.</td>
-        </tr>
-        <tr>
-          <td class="jd">AR dashboards, KPIs, forecasting, promise-to-pay tracking</td>
-          <td>Delivered monthly <b>AR aging, collection-forecast and cash-flow MIS</b> to leadership; later migrated recurring reports to an AI-automated MIS dashboard, cutting turnaround from multiple days to a few hours — a direct precedent for building this role's KPI dashboards.</td>
-        </tr>
-        <tr>
-          <td class="jd">Team leadership: coaching, targets, performance reviews, QA</td>
-          <td><b>Led and mentored finance/collections teams</b> to hit collection and operational targets in Kenya; set SOPs and quality checks for AR processes to keep error rates near zero.</td>
-        </tr>
-        <tr>
-          <td class="jd">Stakeholder management &amp; dispute resolution across Sales, Ops, Billing, Legal</td>
-          <td>Regularly reconciled billing/service disputes with customers and internal Sales/Ops teams; in construction, ran the equivalent discipline on <b>RA-bill and subcontractor reconciliation</b>, cutting approval turnaround from 10 days to 4 and reducing disputes.</td>
-        </tr>
-        <tr>
-          <td class="jd">Systems, controls &amp; compliance — AR tools (SAP), audit trails, write-off documentation</td>
-          <td>Hands-on <b>SAP ERP</b> user for AR/AP, BOM/costing and reconciliation modules, plus Tally, Wiza, Techsmith and Vesta ERP; maintained VAT/statutory compliance and audit-ready documentation across Kenyan and Ghanaian entities.</td>
-        </tr>
-      </table>
-    </section>
+<!-- ================= MAIN CONTENT ================= -->
+<main>
 
-    <!-- SECTION B: CORE CREDIT CONTROL EXPERTISE -->
-    <section>
-      <div class="sec-head">
-        <span class="sec-tab">B</span>
-        <span class="sec-title">Credit Control &amp; AR Expertise, In Detail</span>
-      </div>
+<section class="card" id="s1"><h2><span class="num">1</span> What is a distributor credit score?</h2>
+<div class="content">
+  <p>A <strong>distributor credit score</strong> is a numerical rating that estimates the risk of giving trade credit to a distributor. It helps you decide:</p>
+  <ul>
+    <li>Whether to extend credit to a distributor</li>
+    <li>How much credit limit to give</li>
+    <li>Payment terms: prepaid, 15 / 30 / 60 days</li>
+    <li>Whether to increase, reduce or block credit</li>
+    <li>Which distributors need collection follow‑up</li>
+    <li>Which distributors may default or pay late</li>
+  </ul>
+  <p>Common in FMCG, pharma, building materials, electronics, agro‑inputs and B2B distribution.</p>
+  <table><thead><tr><th>Score</th><th>Risk Category</th><th>Decision</th></tr></thead><tbody>
+    <tr><td>80–100</td><td>Low risk</td><td>Higher limit, 30–60 days</td></tr>
+    <tr><td>60–79</td><td>Medium risk</td><td>Moderate limit, 15–30 days</td></tr>
+    <tr><td>40–59</td><td>High risk</td><td>Low limit, partial advance</td></tr>
+    <tr><td>Below 40</td><td>Very high risk</td><td>Prepaid only / reject</td></tr>
+  </tbody></table>
+  <p>The score can be based on:</p>
+  <ul>
+    <li>Financial strength &amp; payment history</li>
+    <li>Order behaviour &amp; outstanding balances</li>
+    <li>Age of business &amp; market reputation</li>
+    <li>Bank statements, collateral / guarantees</li>
+    <li>External data: legal cases, news, credit bureau</li>
+  </ul>
+</div></section>
 
-      <div class="clusters">
-        <div class="cluster">
-          <h4>Debt Recovery &amp; Collections</h4>
-          <ul>
-            <li>Ran <b>end-to-end collections</b> across the Kenyan distributor network — reminders through escalation to settlement, with measurable cash-flow improvement.</li>
-            <li>Built aging-based prioritisation to keep <b>overdue buckets (30/60/90+)</b> under control and reduce DSO.</li>
-            <li>Handled <b>customer reconciliations</b> and billing-dispute resolution as a standing function, not a one-off.</li>
-            <li>Introduced internal controls and AR policy to prevent recurring late-payment causes.</li>
-          </ul>
-          <div class="term-row">
-            <span class="term">DSO</span><span class="term">Aging Buckets</span><span class="term">Promise-to-Pay</span><span class="term">Debt Recovery</span>
-          </div>
-        </div>
+<section class="card" id="s2"><h2><span class="num">2</span> Simple example scorecard</h2>
+<div class="content">
+  <h3>Example scorecard (total = 100 points)</h3>
+  <table><thead><tr><th>Factor</th><th>Criteria</th><th>Score</th></tr></thead><tbody>
+    <tr><td>Business age</td><td>More than 5 years</td><td>20</td></tr>
+    <tr><td></td><td>2–5 years</td><td>15</td></tr>
+    <tr><td></td><td>Less than 2 years</td><td>5</td></tr>
+    <tr><td>Payment history</td><td>No overdue in last 6 months</td><td>25</td></tr>
+    <tr><td></td><td>Some overdue, cleared quickly</td><td>15</td></tr>
+    <tr><td></td><td>Frequent overdue</td><td>5</td></tr>
+    <tr><td>Avg monthly purchases</td><td>High &amp; stable</td><td>15</td></tr>
+    <tr><td></td><td>Moderate</td><td>10</td></tr>
+    <tr><td></td><td>Low / irregular</td><td>3</td></tr>
+    <tr><td>Credit utilization</td><td>Below 60% of limit</td><td>15</td></tr>
+    <tr><td></td><td>60–90%</td><td>8</td></tr>
+    <tr><td></td><td>Above 90%</td><td>2</td></tr>
+    <tr><td>Financial documents</td><td>Audited financials</td><td>10</td></tr>
+    <tr><td></td><td>Partial documents</td><td>5</td></tr>
+    <tr><td></td><td>No documents</td><td>0</td></tr>
+    <tr><td>Market reputation</td><td>Good trade references</td><td>15</td></tr>
+    <tr><td></td><td>Average</td><td>8</td></tr>
+    <tr><td></td><td>Poor</td><td>0</td></tr>
+  </tbody></table>
 
-        <div class="cluster">
-          <h4>Credit Risk &amp; Policy</h4>
-          <ul>
-            <li>Designed a <b>distributor credit-scoring model</b> to set risk-based credit limits before extending terms.</li>
-            <li>Managed <b>credit holds/release</b> decisions tied to exposure and payment history.</li>
-            <li>Extended risk lens across <b>Credit, Liquidity, Market (FX) and Compliance risk</b> — not credit risk in isolation.</li>
-            <li>Result: <b>18% YoY reduction</b> in bad-debt provisioning through earlier risk flagging.</li>
-          </ul>
-          <div class="term-row">
-            <span class="term">Credit Scoring</span><span class="term">Credit Limits</span><span class="term">Bad-Debt Provisioning</span><span class="term">Risk-Based Terms</span>
-          </div>
-        </div>
+  <h3>Distributor A — scored</h3>
+  <table><thead><tr><th>Factor</th><th>Score</th></tr></thead><tbody>
+    <tr><td>Business age: 7 years</td><td>20</td></tr>
+    <tr><td>Payment history: no overdue</td><td>25</td></tr>
+    <tr><td>Monthly purchases: stable</td><td>15</td></tr>
+    <tr><td>Credit utilization: 50%</td><td>15</td></tr>
+    <tr><td>Financial documents: available</td><td>10</td></tr>
+    <tr><td>Reputation: good</td><td>15</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>100</strong></td></tr>
+  </tbody></table>
+  <div class="ok">✅ Decision: Low risk — approve credit, 30–45 days terms.</div>
 
-        <div class="cluster">
-          <h4>AR Operations &amp; Ledger Accuracy</h4>
-          <ul>
-            <li>Owned <b>invoicing, cash allocation and unapplied-cash clean-up</b> to keep customer ledgers accurate.</li>
-            <li>Ran <b>root-cause fixes</b> on billing/pricing issues blocking payment — not just chasing the symptom.</li>
-            <li>Delivered <b>month-end close support</b> for AR alongside plant/commercial finance teams.</li>
-            <li>Managed AR/AP across <b>135+ franchise accounts</b> (Koutons Retail) and multi-region distributor books (Kenya, Ghana).</li>
-          </ul>
-          <div class="term-row">
-            <span class="term">Invoicing Integrity</span><span class="term">Unapplied Cash</span><span class="term">Reconciliation</span><span class="term">Ledger Accuracy</span>
-          </div>
-        </div>
+  <h3>Distributor B — scored</h3>
+  <table><thead><tr><th>Factor</th><th>Score</th></tr></thead><tbody>
+    <tr><td>Business age: 1 year</td><td>5</td></tr>
+    <tr><td>Payment history: occasional late</td><td>15</td></tr>
+    <tr><td>Monthly purchases: irregular</td><td>3</td></tr>
+    <tr><td>Credit utilization: 95%</td><td>2</td></tr>
+    <tr><td>Financial documents: partial</td><td>5</td></tr>
+    <tr><td>Reputation: average</td><td>8</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>38</strong></td></tr>
+  </tbody></table>
+  <div class="warn">⛔ Decision: High risk — prepaid / advance, or very small limit.</div>
+</div></section>
 
-        <div class="cluster">
-          <h4>Reporting, KPIs &amp; Compliance</h4>
-          <ul>
-            <li>Built recurring <b>AR aging, collection-effectiveness and bad-debt-risk dashboards</b> for leadership.</li>
-            <li>Migrated manual MIS to an <b>AI-automated dashboard</b>, cutting reporting time from days to hours.</li>
-            <li>Maintained <b>VAT/TDS and statutory compliance</b> across Kenyan and Ghanaian operations.</li>
-            <li>Supported audits with organised, evidence-backed documentation of credit and write-off decisions.</li>
-          </ul>
-          <div class="term-row">
-            <span class="term">KPI Dashboards</span><span class="term">Collection Effectiveness</span><span class="term">Write-off Docs</span><span class="term">Audit Trail</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="card" id="s3"><h2><span class="num">3</span> Example credit policy by score</h2>
+<div class="content">
+  <table><thead><tr><th>Credit Score</th><th>Risk Level</th><th>Credit Limit</th><th>Payment Terms</th></tr></thead><tbody>
+    <tr><td>85–100</td><td>Excellent</td><td>Up to 3× avg monthly purchases</td><td>30–60 days</td></tr>
+    <tr><td>70–84</td><td>Good</td><td>Up to 2× avg monthly purchases</td><td>30 days</td></tr>
+    <tr><td>55–69</td><td>Fair</td><td>Up to 1× avg monthly purchases</td><td>15 days</td></tr>
+    <tr><td>40–54</td><td>Weak</td><td>Low limit</td><td>Partial advance</td></tr>
+    <tr><td>Below 40</td><td>Poor</td><td>No credit</td><td>Prepaid only</td></tr>
+  </tbody></table>
+  <p><strong>Example:</strong> a distributor buys <strong>$40,000/month</strong> on average.</p>
+  <div class="note">Score <strong>75</strong> → Limit = 2 × $40,000 = <strong>$80,000</strong>, terms <strong>30 days</strong>.</div>
+  <div class="warn">Score <strong>45</strong> → Limit = <strong>$20,000</strong>, terms <strong>50% advance, 50% on delivery</strong>.</div>
+</div></section>
 
-    <!-- SECTION C: O2C EXPORT PIPELINE -->
-    <section>
-      <div class="sec-head">
-        <span class="sec-tab">C</span>
-        <span class="sec-title">Order-to-Cash — Export Sale, Proforma to Collection</span>
-      </div>
-      <p class="lede">In distributor/export markets, I've owned the <b>full O2C cycle</b> — not just the collections tail end — which is what lets a debt control function actually prevent disputes upstream instead of just chasing them downstream.</p>
+<section class="card" id="s4"><h2><span class="num">4</span> Types of credit‑scoring models</h2>
+<div class="content">
+  <h3>Model 1 — Application scorecard (new distributors)</h3>
+  <ul><li>Inputs: registration, years in business, owners, bank &amp; trade references, financials, requested limit, territory, warehouse capacity</li>
+  <li>Output: approve/reject, initial limit, terms</li></ul>
 
-      <div class="pipeline">
-        <div class="p-step">
-          <div class="p-num">1</div>
-          <h5>Proforma Invoice</h5>
-          <p>Issued/verified proforma against agreed pricing, credit terms and distributor credit limit before order release.</p>
-        </div>
-        <div class="p-step">
-          <div class="p-num">2</div>
-          <h5>Order &amp; Credit Check</h5>
-          <p>Ran the order against the customer's live credit-risk score; cleared or held based on exposure.</p>
-        </div>
-        <div class="p-step">
-          <div class="p-num">3</div>
-          <h5>Dispatch Documentation</h5>
-          <p>Coordinated shipment/logistics docs so invoicing matched what was actually dispatched — no leakage from mismatched paperwork.</p>
-        </div>
-        <div class="p-step">
-          <div class="p-num">4</div>
-          <h5>Commercial Invoice</h5>
-          <p>Raised the final invoice, applying agreed terms, deductions and statutory (VAT) treatment accurately.</p>
-        </div>
-        <div class="p-step">
-          <div class="p-num">5</div>
-          <h5>Follow-up &amp; Collection</h5>
-          <p>Tracked promise-to-pay against due date; escalated per the aging bucket the account fell into.</p>
-        </div>
-        <div class="p-step">
-          <div class="p-num">6</div>
-          <h5>Cash Application &amp; Ledger Close</h5>
-          <p>Applied cash, reconciled the customer account, and closed the ledger clean — ready for the next credit cycle.</p>
-        </div>
-      </div>
-    </section>
+  <h3>Model 2 — Behavioral scorecard (existing distributors)</h3>
+  <ul><li>Inputs: payment history, days to pay, overdue invoices, order frequency/size trend, returns, disputes, utilization, outstanding</li>
+  <li>Output: probability of late payment / default, limit increase or decrease</li></ul>
 
-    <!-- SECTION D: CAREER TIMELINE -->
-    <section>
-      <div class="sec-head">
-        <span class="sec-tab">D</span>
-        <span class="sec-title">Career Timeline — Credit &amp; Commercial Track</span>
-        <span class="sec-note">Brass marker = direct credit control mandate</span>
-      </div>
+  <h3>Model 3 — Probability of Default (PD) model</h3>
+  <p>Predicts chance of severe overdue in next 6–12 months.</p>
+  <table><thead><tr><th>Distributor</th><th>Predicted PD</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>A</td><td>2%</td><td>Low</td></tr><tr><td>B</td><td>8%</td><td>Medium</td></tr><tr><td>C</td><td>24%</td><td>High</td></tr>
+  </tbody></table>
 
-      <div class="timeline">
-        <div class="t-item">
-          <div class="t-head">
-            <span class="t-role">Sr. Manager – Accounts &amp; Commercial</span>
-            <span class="t-org">TSI Architects &amp; Engineers, India</span>
-            <span class="t-date">May 2023 – Current</span>
-          </div>
-          <p class="t-focus">Contract billing, RA-bill certification and reconciliation discipline that mirrors AR dispute-resolution and ledger-accuracy work.</p>
-        </div>
-        <div class="t-item credit">
-          <div class="t-head">
-            <span class="t-role">Manager – Credit Control (+ Logistics)</span>
-            <span class="t-org">RJ Corp / Devyani Food Industries, Nairobi, Kenya</span>
-            <span class="t-date">Nov 2015 – May 2023</span>
-          </div>
-          <p class="t-focus">Core credit control mandate: AR, collections, distributor credit-scoring, DSO management, 18% YoY bad-debt reduction.</p>
-        </div>
-        <div class="t-item">
-          <div class="t-head">
-            <span class="t-role">Manager – Finance, Accounts &amp; Commercial</span>
-            <span class="t-org">Hiralco Limited, Accra, Ghana</span>
-            <span class="t-date">Jan 2015 – Aug 2015</span>
-          </div>
-          <p class="t-focus">Finance operations across Ghana &amp; Nigeria — budgeting, cash flow, VAT and statutory compliance.</p>
-        </div>
-        <div class="t-item credit">
-          <div class="t-head">
-            <span class="t-role">Asst. Manager – Accounts Receivable</span>
-            <span class="t-org">Faces Cosmetics India Ltd, Gurgaon</span>
-            <span class="t-date">Apr 2010 – Jan 2015</span>
-          </div>
-          <p class="t-focus">AR/AP across multiple regions — billing, collections, distributor accounts, aging reports, proactive credit monitoring.</p>
-        </div>
-        <div class="t-item">
-          <div class="t-head">
-            <span class="t-role">Sr. Executive – Accounts &amp; Commercial</span>
-            <span class="t-org">Koutons Retail India Ltd, Gurgaon</span>
-            <span class="t-date">Oct 2004 – Jan 2010</span>
-          </div>
-          <p class="t-focus">Financial operations for 135+ franchise stores — reconciliations, VAT compliance, escrow and bank guarantees.</p>
-        </div>
-        <div class="t-item">
-          <div class="t-head">
-            <span class="t-role">Account Executive</span>
-            <span class="t-org">Nathpa Jhakri Joint Venture, H.P., India</span>
-            <span class="t-date">Aug 2000 – Sep 2004</span>
-          </div>
-          <p class="t-focus">Ledger maintenance, reconciliations and transaction processing — the foundation the rest was built on.</p>
-        </div>
-      </div>
-    </section>
+  <h3>Model 4 — Expected loss model</h3>
+  <div class="formula">Expected Loss = Probability of Default × Exposure at Default × Loss Given Default</div>
+  <table><thead><tr><th>Component</th><th>Value</th></tr></thead><tbody>
+    <tr><td>PD</td><td>10%</td></tr><tr><td>EAD</td><td>$100,000</td></tr><tr><td>LGD</td><td>60%</td></tr><tr><td><strong>Expected Loss</strong></td><td><strong>$6,000</strong></td></tr>
+  </tbody></table>
 
-    <!-- SECTION E: SYSTEMS -->
-    <section>
-      <div class="sec-head">
-        <span class="sec-tab">E</span>
-        <span class="sec-title">Systems, Tools &amp; Education</span>
-      </div>
-      <div class="systems" style="margin-bottom:22px;">
-        <span class="sys-chip core">SAP ERP</span>
-        <span class="sys-chip">Tally ERP</span>
-        <span class="sys-chip">Wiza ERP</span>
-        <span class="sys-chip">Techsmith ERP</span>
-        <span class="sys-chip">Vesta ERP</span>
-        <span class="sys-chip">Advanced Excel</span>
-        <span class="sys-chip">Microsoft 365 Copilot</span>
-        <span class="sys-chip">AI-Automated MIS (Claude, Grok, DeepSeek)</span>
-      </div>
-      <p class="lede" style="margin-bottom:6px;"><b>MBA – Finance</b>, School of Management Studies (2005) · <b>M.Com</b>, Vallabh Govt. P.G. College (1999) · <b>Certificate — Advanced Computer Accounts</b></p>
-    </section>
+  <h3>Model 5 — Dynamic credit‑limit optimization</h3>
+  <table><thead><tr><th>Scenario</th><th>Limit</th><th>Exp. Sales</th><th>Exp. Bad Debt</th><th>Net Contribution</th></tr></thead><tbody>
+    <tr><td>Conservative</td><td>$50,000</td><td>$180,000</td><td>$2,000</td><td>$36,000</td></tr>
+    <tr><td>Moderate ✅</td><td>$80,000</td><td>$260,000</td><td>$5,000</td><td><strong>$54,000</strong></td></tr>
+    <tr><td>Aggressive</td><td>$120,000</td><td>$300,000</td><td>$15,000</td><td>$48,000</td></tr>
+  </tbody></table>
+</div></section>
 
-  </main>
+<section class="card" id="s5"><h2><span class="num">5</span> Data needed for the model</h2>
+<div class="content">
+  <h3>A. Distributor master data</h3>
+  <ul><li>Name, legal entity, owners, registration &amp; tax ID, address</li><li>Years in business, type, coverage area, warehouse capacity, employees, outlets served</li></ul>
+  <h3>B. Financial data</h3>
+  <ul><li>Revenue, profitability, working capital, debt levels, bank statements, audited financials, tax compliance, collateral</li></ul>
+  <h3>C. Transaction data</h3>
+  <ul><li>Invoice history, order frequency &amp; value, product mix, returns, discounts, delivery performance, credit notes, disputes</li></ul>
+  <h3>D. Payment data</h3>
+  <ul><li>Due date, payment date, days past due, overdue amount, partial payments, promises, collection notes, write‑offs</li></ul>
+  <h3>E. External data</h3>
+  <ul><li>Credit bureau score, legal judgments, bankruptcy records, news sentiment, industry &amp; regional risk</li></ul>
+</div></section>
 
-  <div class="close-bar">
-    <div>
-      <h3>Ready to bring this discipline to Cway Group's ledger.</h3>
-      <p>References and detailed CV available on request. Prepared specifically for the Manager – Operations &amp; Debt Control role, Isolo BC, Nigeria.</p>
-    </div>
-    <div class="close-contact">
-      <b>Samarjeet Jamwal</b><br>
-      samarjeetjamwal@gmail.com<br>
-      +91 93179 50702 · Chandigarh, India
-    </div>
-  </div>
+<section class="card" id="s6"><h2><span class="num">6</span> Example AI features (variables)</h2>
+<div class="content">
+  <h3>Payment behaviour</h3>
+  <table><thead><tr><th>Feature</th><th>Example</th></tr></thead><tbody>
+    <tr><td>Average payment days</td><td>42</td></tr>
+    <tr><td>Current overdue amount</td><td>$15,000</td></tr>
+    <tr><td>Invoices overdue more than 60 days</td><td>2</td></tr>
+    <tr><td>Payment punctuality rate</td><td>68%</td></tr>
+  </tbody></table>
+  <h3>Sales behaviour</h3>
+  <table><thead><tr><th>Feature</th><th>Example</th></tr></thead><tbody>
+    <tr><td>Avg monthly purchases</td><td>$55,000</td></tr>
+    <tr><td>Sales trend (6 months)</td><td>−12%</td></tr>
+    <tr><td>Top product share</td><td>45%</td></tr>
+    <tr><td>Order frequency</td><td>8 orders/month</td></tr>
+  </tbody></table>
+  <h3>Credit utilization</h3>
+  <div class="formula">Utilization = Outstanding ÷ Credit limit → 75,000 ÷ 80,000 = 93.75% (high = stress)</div>
+  <h3>Financial health</h3>
+  <ul><li>Revenue trend, profit margin, working‑capital ratio, debt‑to‑equity, cash‑flow coverage, bank balance volatility</li></ul>
+  <h3>Risk &amp; compliance</h3>
+  <ul><li>Legal cases, tax compliance, ownership changes, negative news, industry &amp; geographic risk</li></ul>
+</div></section>
 
+<section class="card" id="s7"><h2><span class="num">7</span> Simple rule‑based model</h2>
+<div class="content">
+  <div class="note"><strong>Rule 1 (New distributor):</strong> age below 1 year → max credit = 0.5 × avg monthly purchase; terms = advance or 7 days.</div>
+  <div class="ok"><strong>Rule 2 (Good payer):</strong> on‑time rate above 90% and zero overdue → increase limit 10–20%.</div>
+  <div class="warn"><strong>Rule 3 (High utilization):</strong> above 90% for 3 months → no increase; review capacity.</div>
+  <div class="warn"><strong>Rule 4 (Declining sales):</strong> purchases down more than 30% in 3 months → reduce limit 20%.</div>
+  <div class="warn"><strong>Rule 5 (Severe overdue):</strong> any invoice above 60 days overdue → credit hold until collection action.</div>
+</div></section>
+
+<section class="card" id="s8"><h2><span class="num">8</span> Advanced weighted scorecard</h2>
+<div class="content">
+  <table><thead><tr><th>Category</th><th>Weight</th><th>Example factors</th></tr></thead><tbody>
+    <tr><td>Payment history</td><td>35%</td><td>On‑time rate, overdue amount</td></tr>
+    <tr><td>Financial strength</td><td>20%</td><td>Revenue, profitability, bank balance</td></tr>
+    <tr><td>Business stability</td><td>15%</td><td>Years, ownership, location</td></tr>
+    <tr><td>Purchase behaviour</td><td>15%</td><td>Order frequency, sales trend</td></tr>
+    <tr><td>Credit utilization</td><td>10%</td><td>Outstanding vs limit</td></tr>
+    <tr><td>External risk</td><td>5%</td><td>Legal issues, industry risk</td></tr>
+  </tbody></table>
+  <h3>Worked example</h3>
+  <table><thead><tr><th>Category</th><th>Weight</th><th>Score/100</th><th>Weighted</th></tr></thead><tbody>
+    <tr><td>Payment history</td><td>35%</td><td>80</td><td>28.0</td></tr>
+    <tr><td>Financial strength</td><td>20%</td><td>70</td><td>14.0</td></tr>
+    <tr><td>Business stability</td><td>15%</td><td>75</td><td>11.25</td></tr>
+    <tr><td>Purchase behaviour</td><td>15%</td><td>60</td><td>9.0</td></tr>
+    <tr><td>Credit utilization</td><td>10%</td><td>50</td><td>5.0</td></tr>
+    <tr><td>External risk</td><td>5%</td><td>90</td><td>4.5</td></tr>
+    <tr><td><strong>Total</strong></td><td>100%</td><td></td><td><strong>71.75</strong></td></tr>
+  </tbody></table>
+  <div class="note">Decision: medium‑good risk → moderate limit, monthly monitoring.</div>
+</div></section>
+
+<section class="card" id="s9"><h2><span class="num">9</span> How AI can help you</h2>
+<div class="content">
+  <h3>1. Predict late payment</h3>
+  <p>Target: “Will this distributor be 60+ days overdue in the next 6 months?” AI learns patterns like rising delays, falling orders, rising utilization, broken promises. Models: Logistic Regression, Decision Trees, Random Forest, Gradient Boosting, Neural Networks.</p>
+  <h3>2. Predict default / bad debt</h3>
+  <table><thead><tr><th>Distributor</th><th>AI default probability</th></tr></thead><tbody>
+    <tr><td>A</td><td>3%</td></tr><tr><td>B</td><td>12%</td></tr><tr><td>C</td><td>38%</td></tr></tbody></table>
+  <h3>3. Auto‑segment distributors</h3>
+  <table><thead><tr><th>Segment</th><th>Characteristics</th><th>Action</th></tr></thead><tbody>
+    <tr><td>Stable low risk</td><td>Long history, timely</td><td>Higher credit, fast approval</td></tr>
+    <tr><td>Growing but stretched</td><td>Sales up, high utilization</td><td>Moderate increase, monitor</td></tr>
+    <tr><td>Declining</td><td>Falling purchases, slower pays</td><td>Reduce exposure</td></tr>
+    <tr><td>Seasonal</td><td>Pays after season</td><td>Seasonal terms</td></tr>
+    <tr><td>High risk</td><td>Frequent overdue, disputes</td><td>Prepaid / guarantee</td></tr>
+  </tbody></table>
+  <h3>4. Better credit‑limit decisions</h3>
+  <div class="note">AI recommends raising Distributor A’s limit $70k → $90k: low PD + high growth potential.</div>
+  <h3>5. Early‑warning system</h3>
+  <ul><li>Delay rising 15 → 45 days · purchases −40% · utilization above 95% · repeated partial payments · frequent disputes · negative news · volatile bank balance</li></ul>
+  <h3>6. Reason codes (explainability)</h3>
+  <div class="note">Score fell 78 → 55 because: (1) delays increased, (2) $18k overdue now, (3) purchases −25%, (4) utilization 94%.</div>
+  <h3>7. Alternative data</h3>
+  <ul><li>Bank‑statement cash flow, invoice patterns, POS/retail data, inventory turnover, geo/market data, news &amp; legal data</li></ul>
+  <h3>8. Automatic document reading</h3>
+  <div class="note">GenAI reads bank statements &amp; extracts avg balance, inflows, overdraft use, irregular withdrawals; also invoices, contracts, tax docs.</div>
+  <h3>9. Collection assistance</h3>
+  <table><thead><tr><th>Overdue</th><th>Action</th></tr></thead><tbody>
+    <tr><td>5 days</td><td>Automated reminder</td></tr><tr><td>15 days</td><td>Sales manager call</td></tr>
+    <tr><td>30 days</td><td>Credit‑hold warning</td></tr><tr><td>60 days</td><td>Escalate to collections</td></tr>
+    <tr><td>90 days</td><td>Legal review / agency</td></tr></tbody></table>
+</div></section>
+
+<section class="card" id="s10"><h2><span class="num">10</span> Step‑by‑step model build</h2>
+<div class="content">
+  <h3>Step 1 — Define the question</h3><p>Example: “Predict whether a distributor becomes 60+ days overdue within 12 months.”</p>
+  <h3>Step 2 — Define default clearly</h3>
+  <table><thead><tr><th>Event</th><th>Definition</th></tr></thead><tbody>
+    <tr><td>Late</td><td>Paid 30+ days after due</td></tr><tr><td>Severe late</td><td>60+ days overdue</td></tr>
+    <tr><td>Default</td><td>90+ days overdue or written off</td></tr></tbody></table>
+  <h3>Step 3 — Collect history</h3><p>Distributor ID, invoices, due/payment dates, amounts, limits, purchases, age, region, default flag. Ideally 2–3 years.</p>
+  <h3>Step 4 — Clean data</h3><p>Fix duplicates, missing payments, wrong due dates, unmatched credit notes, inconsistent names.</p>
+  <h3>Step 5 — Create features</h3>
+  <table><thead><tr><th>Feature</th><th>Meaning</th></tr></thead><tbody>
+    <tr><td>avg_days_to_pay</td><td>Average payment delay</td></tr>
+    <tr><td>pct_on_time</td><td>% paid before due date</td></tr>
+    <tr><td>current_overdue</td><td>Total overdue now</td></tr>
+    <tr><td>max_overdue_12m</td><td>Worst overdue last year</td></tr>
+    <tr><td>utilization</td><td>Outstanding ÷ limit</td></tr>
+    <tr><td>sales_trend_3m</td><td>Purchase growth 3 months</td></tr></tbody></table>
+  <h3>Step 6 — Split data</h3><p>Train on older period (e.g. 2023–24), test on recent (2025).</p>
+  <h3>Step 7 — Choose model</h3><p>Start: Logistic Regression (explainable) → Gradient Boosting (accuracy) → convert to scorecard.</p>
+  <h3>Step 8 — Evaluate</h3>
+  <table><thead><tr><th>Metric</th><th>Meaning</th></tr></thead><tbody>
+    <tr><td>AUC / KS</td><td>Ranking &amp; separation power</td></tr>
+    <tr><td>Precision / Recall</td><td>Quality of default flags</td></tr>
+    <tr><td>Lift</td><td>Better than random selection</td></tr></tbody></table>
+  <h3>Step 9 — Map probability to score</h3>
+  <table><thead><tr><th>PD</th><th>Score</th><th>Grade</th></tr></thead><tbody>
+    <tr><td>0–2%</td><td>90–100</td><td>A</td></tr><tr><td>2–5%</td><td>75–89</td><td>B</td></tr>
+    <tr><td>5–10%</td><td>60–74</td><td>C</td></tr><tr><td>10–20%</td><td>40–59</td><td>D</td></tr>
+    <tr><td>Above 20%</td><td>Below 40</td><td>E</td></tr></tbody></table>
+  <h3>Step 10 — Approval rules</h3>
+  <table><thead><tr><th>Score</th><th>Action</th></tr></thead><tbody>
+    <tr><td>85+</td><td>Auto‑approve to policy limit</td></tr><tr><td>70–84</td><td>Standard terms</td></tr>
+    <tr><td>55–69</td><td>Reduced limit</td></tr><tr><td>40–54</td><td>Manual review, advance</td></tr>
+    <tr><td>Below 40</td><td>Reject / prepaid</td></tr></tbody></table>
+  <h3>Step 11 — Monitor</h3>
+  <table><thead><tr><th>Band</th><th>Expected default</th><th>Actual default</th></tr></thead><tbody>
+    <tr><td>85–100</td><td>1%</td><td>1.2%</td></tr><tr><td>70–84</td><td>3%</td><td>3.5%</td></tr>
+    <tr><td>55–69</td><td>8%</td><td>11.0%</td></tr><tr><td>40–54</td><td>15%</td><td>21.0%</td></tr>
+    <tr><td>Below 40</td><td>30%</td><td>36.0%</td></tr></tbody></table>
+  <p>If actual is much higher than expected → review / retrain model.</p>
+</div></section>
+
+<section class="card" id="s11"><h2><span class="num">11</span> Practical AI model example</h2>
+<div class="content">
+  <p><strong>Target:</strong> default = 90+ days overdue within 12 months.</p>
+  <table><thead><tr><th>Input variable</th><th>Example</th></tr></thead><tbody>
+    <tr><td>Business age</td><td>4 years</td></tr><tr><td>Avg monthly purchases</td><td>$60,000</td></tr>
+    <tr><td>On‑time rate</td><td>72%</td></tr><tr><td>Current overdue</td><td>$12,000</td></tr>
+    <tr><td>Max overdue 12m</td><td>$25,000</td></tr><tr><td>Utilization</td><td>88%</td></tr>
+    <tr><td>Sales trend 6m</td><td>−10%</td></tr><tr><td>Disputes</td><td>2</td></tr></tbody></table>
+  <table><thead><tr><th>Distributor</th><th>Predicted PD</th></tr></thead><tbody>
+    <tr><td>A</td><td>4%</td></tr><tr><td>B</td><td>14%</td></tr><tr><td>C</td><td>31%</td></tr></tbody></table>
+  <table><thead><tr><th>PD band</th><th>Action</th></tr></thead><tbody>
+    <tr><td>Below 5%</td><td>Increase limit</td></tr><tr><td>5–10%</td><td>Maintain</td></tr>
+    <tr><td>10–20%</td><td>Reduce limit / guarantee</td></tr><tr><td>Above 20%</td><td>Hold / prepaid</td></tr></tbody></table>
+  <ul><li>A → eligible for increase · B → maintain &amp; monitor · C → reduce exposure</li></ul>
+</div></section>
+
+<section class="card" id="s12"><h2><span class="num">12</span> AI‑generated scorecard example</h2>
+<div class="content">
+  <table><thead><tr><th>Factor</th><th>Points</th></tr></thead><tbody>
+    <tr><td>On‑time rate above 90%</td><td>+20</td></tr><tr><td>No overdue last 12m</td><td>+15</td></tr>
+    <tr><td>Business age above 5y</td><td>+10</td></tr><tr><td>Utilization below 60%</td><td>+10</td></tr>
+    <tr><td>Positive sales trend</td><td>+5</td></tr><tr><td>Current overdue exists</td><td>−15</td></tr>
+    <tr><td>3+ late payments last year</td><td>−10</td></tr><tr><td>Negative cash‑flow trend</td><td>−10</td></tr></tbody></table>
+  <table><thead><tr><th>Event</th><th>Points</th></tr></thead><tbody>
+    <tr><td>Base score</td><td>60</td></tr><tr><td>On‑time 92%</td><td>+20</td></tr><tr><td>No overdue</td><td>+15</td></tr>
+    <tr><td>Age 6 years</td><td>+10</td></tr><tr><td>Utilization 85%</td><td>0</td></tr><tr><td>Sales declining</td><td>−5</td></tr>
+    <tr><td><strong>Final</strong></td><td><strong>100</strong></td></tr></tbody></table>
+  <div class="ok">Very strong distributor.</div>
+</div></section>
+
+<section class="card" id="s13"><h2><span class="num">13</span> How GenAI specifically helps</h2>
+<div class="content">
+  <ol>
+    <li>Draft credit policy</li><li>Design scorecard factors</li><li>Write SQL / Python code</li>
+    <li>Clean &amp; structure data</li><li>Explain model results</li><li>Generate reason codes</li>
+    <li>Summarize distributor risk profiles</li><li>Draft collection emails</li>
+    <li>Create dashboards</li><li>Translate model output into business language</li>
+  </ol>
+  <div class="prompt">PROMPT: “I have distributor payment data (invoice date, due date, payment date, amount, distributor ID, credit limit, monthly purchases). Help me create features to predict 90‑day default.”</div>
+  <div class="prompt">PROMPT: “Create a distributor credit scorecard for an FMCG company using payment history, business age, sales trend, credit utilization and financial documents.”</div>
+  <p class="warn">⚠ GenAI accelerates the process but must not be the sole decision‑maker.</p>
+</div></section>
+
+<section class="card" id="s14"><h2><span class="num">14</span> Risks when using AI</h2>
+<div class="content">
+  <div class="warn"><strong>1. Bias:</strong> may unfairly disadvantage regions, sizes or business types.</div>
+  <div class="warn"><strong>2. Poor data quality:</strong> wrong invoices/payments → wrong scores.</div>
+  <div class="warn"><strong>3. Overfitting:</strong> good on old data, fails on new distributors.</div>
+  <div class="warn"><strong>4. No explainability:</strong> credit teams must understand rejections/limits.</div>
+  <div class="warn"><strong>5. Economic shifts:</strong> model trained in good times fails in stress periods.</div>
+  <div class="warn"><strong>6. Over‑reliance:</strong> large limits still need human judgment.</div>
+</div></section>
+
+<section class="card" id="s15"><h2><span class="num">15</span> Implementation roadmap (4 phases)</h2>
+<div class="content">
+  <h3>Phase 1 — Rule‑based scorecard</h3><ul><li>Age, payment history, outstanding, utilization, documents, references → basic score, limit, workflow</li></ul>
+  <h3>Phase 2 — Statistical scorecard</h3><ul><li>Use history to weight factors (payment history &amp; utilization usually strongest) → better segmentation</li></ul>
+  <h3>Phase 3 — AI / ML model</h3><ul><li>Predict late payment, PD, expected loss; optimize limits; early warnings; dynamic limits</li></ul>
+  <h3>Phase 4 — Continuous monitoring</h3><ul><li>Bad debt by band, model drift, overrides, collection performance, profitability → model stays reliable</li></ul>
+</div></section>
+
+<section class="card" id="s16"><h2><span class="num">16</span> Minimum data to start</h2>
+<div class="content">
+  <table><thead><tr><th>Field</th><th>Why it matters</th></tr></thead><tbody>
+    <tr><td>Distributor ID / name / region</td><td>Identity &amp; segmentation</td></tr>
+    <tr><td>Business start date</td><td>Age</td></tr>
+    <tr><td>Credit limit</td><td>Exposure control</td></tr>
+    <tr><td>Invoice ID / date / amount</td><td>Transaction tracking</td></tr>
+    <tr><td>Due date / payment date / amount</td><td>Payment behaviour</td></tr>
+    <tr><td>Outstanding / overdue days</td><td>Current exposure &amp; delinquency</td></tr>
+    <tr><td>Monthly purchases / category</td><td>Volume &amp; concentration risk</td></tr>
+  </tbody></table>
+  <div class="ok">With only this, you can already build a useful model.</div>
+</div></section>
+
+<section class="card" id="s17"><h2><span class="num">17</span> Credit‑risk dashboard example</h2>
+<div class="content">
+  <h3>Portfolio view</h3><ul><li>Total exposure · total overdue · aging buckets · bad‑debt trend · DSO · utilization</li></ul>
+  <h3>Distributor view</h3><ul><li>Score · grade · outstanding · available credit · overdue · payment &amp; sales trend · recommended action</li></ul>
+  <table><thead><tr><th>Distributor</th><th>Score</th><th>Outstanding</th><th>Overdue</th><th>Utilization</th><th>Action</th></tr></thead><tbody>
+    <tr><td>A</td><td>88</td><td>$40,000</td><td>$0</td><td>50%</td><td>Increase limit</td></tr>
+    <tr><td>B</td><td>67</td><td>$72,000</td><td>$5,000</td><td>90%</td><td>Monitor closely</td></tr>
+    <tr><td>C</td><td>42</td><td>$95,000</td><td>$28,000</td><td>105%</td><td>Credit hold</td></tr></tbody></table>
+</div></section>
+
+<section class="card" id="s18"><h2><span class="num">18</span> AI recommendation engine example</h2>
+<div class="content">
+<div class="report">Distributor : ABC Trading Ltd
+Credit Score: 58  |  Grade: C  |  PD(90d): 14%
+Outstanding : $85,000 | Limit: $90,000 | Utilization: 94%
+
+Main risk drivers:
+ 1. Payment delays increased 20 → 48 days
+ 2. Purchases declined 18% last quarter
+ 3. Two invoices 35 days overdue
+
+RECOMMENDATION:
+ Reduce limit to $65,000 and require 50% advance on new
+ orders until payment behaviour improves.</div>
+  <p>Practical, and easy for management to act on.</p>
+</div></section>
+
+<section class="card" id="s19"><h2><span class="num">19</span> Quick manual formula</h2>
+<div class="content">
+  <div class="formula">Score = Payment(40%) + Stability(20%) + Purchase(15%) + Financial(15%) + External(10%)</div>
+  <table><thead><tr><th>Component</th><th>Score</th><th>Weight</th><th>Weighted</th></tr></thead><tbody>
+    <tr><td>Payment behaviour</td><td>80</td><td>40%</td><td>32.0</td></tr>
+    <tr><td>Business stability</td><td>70</td><td>20%</td><td>14.0</td></tr>
+    <tr><td>Purchase behaviour</td><td>60</td><td>15%</td><td>9.0</td></tr>
+    <tr><td>Financial strength</td><td>50</td><td>15%</td><td>7.5</td></tr>
+    <tr><td>External risk</td><td>90</td><td>10%</td><td>9.0</td></tr>
+    <tr><td><strong>Final</strong></td><td></td><td></td><td><strong>71.5</strong></td></tr></tbody></table>
+  <div class="note">71.5 → moderate risk → approve with controlled limit.</div>
+</div></section>
+
+<section class="card" id="s20"><h2><span class="num">20</span> Build faster with AI prompts</h2>
+<div class="content">
+  <div class="prompt">STEP 1 — “Help me build a distributor credit scorecard. We have invoice history, payment dates, outstanding balances, credit limits and business age. Goal: predict late payment and set limits.”</div>
+  <div class="prompt">STEP 2 — “Based on invoice and payment data, what features should I create to predict distributor default?”</div>
+  <div class="prompt">STEP 3 — “Create a credit policy with score bands, limits, payment terms and approval rules for distributors.”</div>
+  <div class="prompt">STEP 4 — “Write Python code to train a logistic regression predicting whether a distributor becomes 90 days overdue in the next 12 months.”</div>
+  <div class="prompt">STEP 5 — “Explain why this distributor’s score decreased, based on overdue amount, payment delay, utilization and sales trend.”</div>
+</div></section>
+
+<section class="card" id="s21"><h2><span class="num">21</span> Recommended final design</h2>
+<div class="content">
+  <p><strong>Score range:</strong> 0–100</p>
+  <h3>Main inputs</h3>
+  <ol><li>Payment history 35%</li><li>Exposure &amp; utilization 20%</li><li>Business stability 15%</li>
+  <li>Sales/purchase behaviour 15%</li><li>Financial strength 10%</li><li>External risk 5%</li></ol>
+  <h3>Outputs</h3>
+  <ul><li>Credit score · risk grade · recommended limit · terms · early warnings · reason codes</li></ul>
+  <table><thead><tr><th>Score</th><th>Grade</th><th>Decision</th></tr></thead><tbody>
+    <tr><td>85–100</td><td>A</td><td>Auto‑approve, favourable terms</td></tr>
+    <tr><td>70–84</td><td>B</td><td>Standard terms</td></tr>
+    <tr><td>55–69</td><td>C</td><td>Reduced limit, tighter terms</td></tr>
+    <tr><td>40–54</td><td>D</td><td>Manual review, advance/guarantee</td></tr>
+    <tr><td>Below 40</td><td>E</td><td>Prepaid or reject</td></tr></tbody></table>
+</div></section>
+
+<section class="card" id="s22"><h2><span class="num">22</span> Summary</h2>
+<div class="content">
+  <p>A distributor credit‑scoring model makes credit decisions <strong>faster, safer and consistent</strong>.</p>
+  <ul>
+    <li><strong>Start simple:</strong> scorecard on payment history, age, financials, sales behaviour, utilization, external risk.</li>
+    <li><strong>Then add AI/ML:</strong> late‑payment &amp; default probability, expected loss, optimal limits, early warnings.</li>
+    <li><strong>AI benefits:</strong> pattern finding, document automation, limit recommendations, explanations, collections, portfolio monitoring.</li>
+  </ul>
+  <div class="ok">Best approach: start simple → use data you already have → validate against actual bad debt → gradually move to AI‑driven dynamic credit decisions.</div>
+</div></section>
+
+</main>
 </div>
+
+<button id="toTop" title="Back to top">↑</button>
+<footer>Distributor Credit‑Scoring Guide · Interactive HTML · Generated 2026</footer>
+
+<script>
+  // ----- collapse / expand on section title click -----
+  document.querySelectorAll('section.card > h2').forEach(function(h){
+    h.addEventListener('click', function(){ h.parentElement.classList.toggle('collapsed'); });
+  });
+
+  // ----- toolbar buttons -----
+  document.getElementById('expandAll').onclick = function(){
+    document.querySelectorAll('section.card').forEach(function(s){ s.classList.remove('collapsed'); });
+  };
+  document.getElementById('collapseAll').onclick = function(){
+    document.querySelectorAll('section.card').forEach(function(s){ s.classList.add('collapsed'); });
+  };
+  document.getElementById('tocToggle').onclick = function(){
+    document.body.classList.toggle('show-toc');
+  };
+
+  // ----- TOC one-click navigation -----
+  var links = document.querySelectorAll('#tocList a');
+  links.forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var sec = document.getElementById(a.getAttribute('href').slice(1));
+      sec.classList.remove('collapsed');           // make sure it is readable
+      sec.scrollIntoView({behavior:'smooth', block:'start'});
+      setActive(a);
+      if (window.innerWidth <= 900) document.body.classList.remove('show-toc');
+    });
+  });
+  function setActive(a){
+    links.forEach(function(x){ x.classList.remove('active'); });
+    a.classList.add('active');
+  }
+
+  // ----- TOC search filter -----
+  document.getElementById('tocSearch').addEventListener('input', function(){
+    var q = this.value.toLowerCase();
+    document.querySelectorAll('#tocList li').forEach(function(li){
+      li.style.display = li.textContent.toLowerCase().indexOf(q) > -1 ? '' : 'none';
+    });
+  });
+
+  // ----- scroll spy + progress bar + top button -----
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section.card'));
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    // progress
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById('progress').style.width = (h > 0 ? (y/h)*100 : 0) + '%';
+    // top button
+    toTop.style.display = y > 400 ? 'block' : 'none';
+    // spy
+    var current = sections[0];
+    sections.forEach(function(s){ if (s.offsetTop - 140 <= y) current = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+    });
+  });
+  toTop.onclick = function(){ window.scrollTo({top:0, behavior:'smooth'}); };
+</script>
 </body>
 </html>
